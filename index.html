@@ -209,7 +209,7 @@
       cursor: pointer;
     }
 
-    .lang-button {
+    /* .lang-button {
       position: relative;
       background-color: #333;
       color: white;
@@ -232,7 +232,28 @@
       z-index: 2000;
       min-width: 80px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-    }
+    } */
+    .lang-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px; /* controls the leftward shift */
+}
+
+#lang-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background-color: #333;
+  border: 1px solid #555;
+  padding: 4px 0;
+  z-index: 1001;
+}
 
     #lang-menu div {
       padding: 8px 12px;
@@ -352,7 +373,9 @@
     <div id="overlay" class="overlay" onclick="closeDrawer()"></div>
   <!-- Main Content -->
   <div class="content">
-    <h1 id="home">Welcome to CandleCue</h1>
+    <!-- <h1 id="home">Welcome to CandleCue</h1> -->
+    <div id="home" style="position: relative; top: -70px;"></div>
+    <h1>Welcome to CandleCue</h1>
     <p>This is the official homepage for the CandleCue app.</p>
 
     <h2 id="features">Features</h2>
