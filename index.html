@@ -172,13 +172,20 @@
  
 
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CandleCue</title>
+<!-- <link rel="stylesheet" href="style.css" /> -->
   <style>
     body {
       margin: 0;
@@ -201,38 +208,17 @@
     }
 
     .brand {
-      font-weight: bold;
-    }
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
 
     .menu-toggle {
       font-size: 24px;
       cursor: pointer;
     }
 
-    /* .lang-button {
-      position: relative;
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-      user-select: none;
-    }
-
-    #lang-menu {
-      display: none;
-      position: absolute;
-      top: 36px;
-      right: 0;
-      background-color: #333;
-      border: 1px solid #555;
-      border-radius: 6px;
-      z-index: 2000;
-      min-width: 80px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-    } */
+  
     .lang-button {
   background-color: #333;
   color: white;
@@ -341,9 +327,9 @@
   backdrop-filter: blur(6px); /* Animate into the blur */
 }
     
+</style>
 
-    
-  </style>
+
 </head>
 
 <body>
@@ -405,14 +391,7 @@
 
   <!-- JavaScript -->
   <script>
-    // function toggleMenu() {
-    //   const drawer = document.getElementById("drawer");
-    //   drawer.classList.toggle("open");
-    // }
-
-      // function closeDrawer() {
-        //     document.getElementById("drawer").classList.remove("open");
-        //   }
+    
 
     function toggleMenu() {
         const drawer = document.getElementById("drawer");

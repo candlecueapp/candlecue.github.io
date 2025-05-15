@@ -1,55 +1,10 @@
-
-
-<!-- privacy.html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - CandleCue</title>
-  <style>
-    body {
-      background-color: #111;
-      color: white;
-      font-family: Arial, sans-serif;
-      padding: 40px;
-    }
-
-    h1 {
-      color: #ff7300;
-    }
-
-    a {
-      color: #ff7300;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Privacy Policy</h1>
-  <p>Your privacy matters to us. CandleCue is designed to work entirely offline and does not collect, store, or transmit
-    any personal data.</p>
-  <ul>
-    <li>No account or login is required to use CandleCue.</li>
-    <li>We do not track your usage behavior or device information.</li>
-    <li>No third-party analytics or advertisements are included.</li>
-    <li>All alerts and settings are stored locally on your device.</li>
-  </ul>
-  <p>If you have any questions, feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
-  <p><a href="index.html">← Back to Home</a></p>
-</body>
-
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - CandleCue</title>
+  <title>Privacy Policy</title>
   <style>
     body {
       margin: 0;
@@ -58,29 +13,44 @@
       color: white;
     }
 
-    header {
-      background-color: #222;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
+    .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-    .brand {
-      font-weight: bold;
-    }
+.brand {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.home-link {
+  color: #ff7300;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.right-placeholder {
+  width: 48px;
+  height: 24px;
+}
 
     .content {
-      padding: 100px 20px 40px;
+      padding: 80px 40px;
       max-width: 800px;
       margin: 0 auto;
     }
 
-    h1 {
+    h1,
+    h2 {
       color: #ff7300;
     }
 
@@ -92,14 +62,22 @@
     a:hover {
       text-decoration: underline;
     }
+
+    ul {
+      padding-left: 20px;
+    }
   </style>
 </head>
 
 <body>
-  <header>
-    <a href="index.html" class="brand">← CandleCue</a>
-    <span>Privacy Policy</span>
-  </header>
+  <!-- Header -->
+  <div class="header">
+    <a href="index.html" class="home-link">← Home</a>
+    <span class="brand">CandleCue</span>
+    <div style="width: 80px; height: 32px;"></div> <!-- Placeholder -->
+  </div>
+
+  <!-- Main Content -->
   <div class="content">
     <h1>Privacy Policy</h1>
     <p>Your privacy matters to us. CandleCue is designed to work entirely offline and does not collect, store, or
