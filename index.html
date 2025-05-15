@@ -1,40 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CandleCue – Stay Synced With Every Bar</title>
+  <title>CandleCue</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0e0f11;
-      color: #f8f8f8;
       margin: 0;
-      padding: 2rem;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0e0f11;
+      color: #f8f8f8;
       line-height: 1.6;
     }
-    h1 {
+
+    nav {
+      background-color: #1c1d20;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin-right: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #f8f8f8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .lang-select {
+      background-color: #2a2b2e;
+      color: #f8f8f8;
+      border: none;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1,
+    h2 {
       color: #ff7300;
     }
-    a {
-      color: #ff7300;
-      text-decoration: none;
+
+    @media (max-width: 600px) {
+      nav ul li {
+        margin-right: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>Welcome to CandleCue</h1>
-  <p>CandleCue helps you trade with intention. Set bar-close alerts and stay synced to your timeframe - even when away from the screen.</p>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="#terms">Terms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <select class="lang-select">
+      <option value="en">English</option>
+      <option value="ko">한국어</option>
+      <option value="ja">日本語</option>
+      <option value="zh">中文</option>
+      <option value="es">Español</option>
+    </select>
+  </nav>
 
-  <h2>Features:</h2>
-  <ul>
-    <li>Custom alerts for your timeframe </li>
-    <li>Sound and vibration cues</li>
-    <li>Supports multiple intervals</li>
-    <li>Works in background mode</li>
-  </ul>
+  <section id="home">
+    <h1>Welcome to CandleCue</h1>
+    <p>This is the official homepage for the CandleCue app.</p>
+  </section>
 
-  <p>📱 Available soon on the Apple App Store</p>
-  <p>📬 Contact: <a href="mailto:candlecueapp@gmail.com">candlecueapp@gmail.com</a></p>
+  <section id="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Custom bar-close alerts</li>
+      <li>Sound and vibration cues</li>
+      <li>Supports multiple timeframes</li>
+      <li>Runs in background mode</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>This app does not collect or store personal data. Your use is completely private.</p>
+  </section>
+
+  <section id="terms">
+    <h2>Terms of Service</h2>
+    <p>By using CandleCue, you agree to the terms outlined here. No guarantees of trading outcomes are made.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📬 Email us at <a href="mailto:candlecueapp@gmail.com">candlecueapp@gmail.com</a></p>
+  </section>
 </body>
+
 </html>
