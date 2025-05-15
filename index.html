@@ -5,107 +5,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CandleCue</title>
-
-<!--   
   <style>
     body {
-      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #0e0f11;
-      color: #f8f8f8;
-      line-height: 1.6;
-    }
-
-    nav {
-      background-color: #1c1d20;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
+      background-color: #111;
+      color: white;
       margin: 0;
+      padding: 0;
     }
-
-    nav ul li {
-      margin-right: 1.5rem;
-    }
-
-    nav ul li a {
-      color: #f8f8f8;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .lang-select {
-      background-color: #2a2b2e;
-      color: #f8f8f8;
-      border: none;
-      padding: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1,
-    h2 {
-      color: #ff7300;
-    }
-
-    @media (max-width: 600px) {
-      nav ul li {
-        margin-right: 1rem;
-      }
-    }
-  </style> -->
-  <style>
-    .navbar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #222;
+  
+    nav.navbar {
+      background-color: #1a1a1a;
       padding: 10px 20px;
-    }
-  
-    .navbar ul {
       display: flex;
       flex-wrap: wrap;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      justify-content: space-between;
+      align-items: center;
     }
   
-    .navbar li {
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav.navbar li {
       margin-right: 20px;
     }
   
+    nav.navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  
+    nav.navbar a:hover {
+      color: #ff7300;
+    }
+  
     .language-selector {
-      margin-top: 10px;
-      margin-left: auto;
+      background: #333;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 14px;
     }
   
     @media (max-width: 600px) {
-      .navbar {
+      nav.navbar {
         flex-direction: column;
         align-items: flex-start;
       }
   
-      .language-selector {
-        margin-left: 0;
-        align-self: center;
+      nav.navbar ul {
+        flex-direction: column;
+        width: 100%;
       }
+  
+      nav.navbar li {
+        margin: 5px 0;
+      }
+  
+      .language-selector {
+        align-self: flex-start;
+        margin-top: 10px;
+      }
+    }
+  
+    h1,
+    h2 {
+      color: #ff7300;
+    }
+  
+    a {
+      color: #ff7300;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    section {
+      padding: 20px;
     }
   
     </style>
@@ -139,14 +125,12 @@
       <li><a href="#terms">Terms</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="language-selector">
-      <select>
-        <option value="en">EN</option>
-        <option value="es">ES</option>
-        <option value="ko">KO</option>
-        <!-- Add more if needed -->
-      </select>
-    </div>
+    <select class="language-selector">
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+      <option value="ko">KO</option>
+      <!-- Add more -->
+    </select>
     </nav>
 
   <section id="home">
