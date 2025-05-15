@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CandleCue</title>
-  <style>
+  <!-- <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #111;
@@ -94,29 +94,112 @@
       padding: 20px;
     }
   
-    </style>
+    </style> -->
 
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #111;
+        color: white;
+        margin: 0;
+      }
+    
+      /* Navbar container */
+      .navbar {
+        background-color: #1a1a1a;
+        padding: 10px 20px;
+        position: relative;
+      }
+    
+      /* Hamburger button */
+      .menu-toggle {
+        display: none;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+    
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+      }
+    
+      .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    
+      .nav-links li a:hover {
+        color: #ff7300;
+      }
+    
+      .language-selector {
+        margin-left: auto;
+        background: #333;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+    
+      @media (max-width: 600px) {
+        .menu-toggle {
+          display: block;
+        }
+    
+        .nav-links {
+          flex-direction: column;
+          display: none;
+          width: 100%;
+          margin-top: 40px;
+        }
+    
+        .nav-links.active {
+          display: flex;
+        }
+    
+        .language-selector {
+          align-self: flex-start;
+          margin-top: 10px;
+        }
+      }
+    
+      h1,
+      h2 {
+        color: #ff7300;
+      }
+    
+      a {
+        color: #ff7300;
+        text-decoration: none;
+      }
+    
+      a:hover {
+        text-decoration: underline;
+      }
+    
+      section {
+        padding: 20px;
+      }
+    
+      </style>
+
+      
 </head>
 
 <body>
-  <!-- <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#privacy">Privacy Policy</a></li>
-      <li><a href="#terms">Terms</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <select class="lang-select">
-      <option value="en">English</option>
-      <option value="ko">한국어</option>
-      <option value="ja">日本語</option>
-      <option value="zh">中文</option>
-      <option value="es">Español</option>
-    </select>
-  </nav> -->
-  <nav class="navbar">
+
+  <!-- <nav class="navbar">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#features">Features</a></li>
@@ -130,9 +213,30 @@
       <option value="es">ES</option>
       <option value="ko">KO</option>
       <!-- Add more -->
-    </select>
-    </nav>
+    <!-- </select>
+    </nav> -->  
 
+    <nav class="navbar">
+      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <select class="language-selector">
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+          <option value="ko">KO</option>
+        </select>
+      </ul>
+      </nav>
+
+
+      
   <section id="home">
     <h1>Welcome to CandleCue</h1>
     <p>This is the official homepage for the CandleCue app.</p>
