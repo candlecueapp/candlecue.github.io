@@ -27,7 +27,7 @@
     .home-link {
       color: #ff7300;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 18px;
     }
 
     .brand {
@@ -177,8 +177,8 @@
   
   <div class="faq-item">
     <p><strong>Q:</strong> Don’t most trading platforms already show countdowns to candle close?</p>
-    <p><strong>A:</strong> In a way, yes—but you're still forced to watch the screen and to manually keep mental tabs.
-      CandleCue enhances this by providing visual, audio, and vibration cues at each candle close—so you can stay focused
+    <p><strong>A:</strong> In a way, yes—but you're still forced to watch the screen and to manually keep mental tabs on the countdowns.
+      CandleCue enhances this by providing visual, audio, and vibration cues at each candle close—so you can stay fully focused
       on your trading process, whether that’s reading price action, confirming chart patterns, or analyzing footprint or
       Bookmap-style data.<br><br>
       CandleCue also allows you to customize layered alerts on top of your main timeframe. By default, you’ll get a
@@ -190,11 +190,12 @@
   <div class="faq-item">
     <p><strong>Q:</strong> Can I layer more than one sub-timeframe?</p>
     <p><strong>A:</strong> Absolutely. For example, you can layer 5-minute, 15-minute, and 30-minute sub-timeframes into
-      your 60-minute (1-hour) main interval.</p>
-  </div>
+      your 60-minute (1-hour) main interval. This allows you to receive multiple bar-close alerts within each
+      hour—offering a more detailed view of market structure across different time horizons.</p>
+    </div>
   
-  <div class="faq-item">
-    <p><strong>Q:</strong> If I layer multiple sub-timeframes, what happens when several bars close at the same time?</p>
+  <!-- <div class="faq-item">
+    <p><strong>Q:</strong> If I layer multiple sub-timeframes, what happens when several timeframes close at the same time?</p>
     <p><strong>A:</strong> CandleCue will send only the alert for the largest (i.e., highest) sub-timeframe at that
       moment. For instance, if your main timeframe is 1 hour and you layer both 15-minute and 30-minute alerts, you’ll receive the 30-minute bar close alert at each half-hour mark (e.g., 9:30, 10:30).<br><br>
       Why do we do this? Besides avoiding redundant noise:<br><br>
@@ -206,6 +207,22 @@
       By emphasizing the largest closing timeframe, CandleCue keeps you aligned with the broader trend—crucial for
       momentum or breakout strategies.</p>
   </div>
+  
+  
+  
+  -->
+  
+  <div class="faq-item">
+    <p><strong>Q:</strong> If I layer multiple sub-timeframes, what happens when several timeframes close at the same
+      time?</p>
+    <p><strong>A:</strong> When multiple sub-timeframe bars close simultaneously, CandleCue will send only the alert for
+      the largest (i.e., highest) timeframe at that moment. For example, if your main timeframe is 1 hour and you’ve
+      layered both 15-minute and 30-minute intervals, you’ll receive the 30-minute alert at the half-hour marks (e.g.,
+      9:30, 10:30), rather than the 15-minute one.<br><br>
+      This helps avoid redundant signals and keeps the focus on higher timeframe closes, which often carry more weight in
+      trade planning. It also reflects how many traders prioritize higher timeframes for trend context, while using lower
+      ones for execution.</p>
+    </div>
   
   <!-- <div class="faq-item">
     <p><strong>Q:</strong> What is a custom notification? Is that the same as a layered notification?</p>
@@ -226,12 +243,12 @@
     <div class="faq-item">
       <p><strong>Q:</strong> What is a custom notification? Is that the same as a layered notification?</p>
       <p><strong>A:</strong> Custom notifications are recurring alerts that trigger at a specific time relative to your main
-        candle close—for example, exactly “1 minute before.” You can choose one or multiple custom alerts (e.g., 5 minutes
+        candle close—for example, exactly “1 minute before” before your main candle closes. You can set it so that the alert gives you enough time to prepare both physically and mentally when your current bar closes. You can choose one or multiple custom alerts (e.g., 5 minutes
         before and 1 minute before), and they will repeat consistently with each new candle.<br><br>
         Layered notifications, on the other hand, are tied to additional sub-timeframe closes—such as at every 5-min candle close and/or every 15-minute candle close — on top of your main timeframe. These help you track market structure across multiple
         intervals.<br><br>
         You can use custom and layered notifications independently or combine them. For instance, you could receive a
-        layered alert every 15 minutes while also getting a “1 minute before” custom alert to prepare just before your main
+        layered alert every 15 minute mark while also getting a “1 minute before” custom alert to prepare just before your main
         candle closes.<br><br>
         If a custom alert happens to coincide with a layered alert—such as a 5-minute custom alert overlapping with a
         5-minute sub-timeframe layer—CandleCue will prioritize the layered alert message at that moment to avoid duplicate
@@ -295,10 +312,10 @@
   
   <div class="faq-item">
     <p><strong>Q:</strong> Does CandleCue track my data?</p>
-    <p><strong>A:</strong> No. CandleCue does not collect, store, or transmit any personal data. Your use is completely
-      private.</p>
-  </div>
-  
+    <p><strong>A:</strong> No. CandleCue does not collect, transmit, or store any personal data on external servers. Your
+      use is completely private. The app only saves your selected preferences—such as alert settings or language
+      choice—locally on your device to enhance your experience.</p>
+    </div>
   <div class="faq-item">
     <p><strong>Q:</strong> I don't see any ads in the app. Will CandleCue ever introduce ads?</p>
     <p><strong>A:</strong> No. CandleCue is designed to support focused, distraction-free trade execution and will never
