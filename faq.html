@@ -75,7 +75,7 @@
  
 
     
-      <div class="faq-item">
+      <!-- <div class="faq-item">
         <p><strong>Q:</strong> What is CandleCue used for?</p>
         <p><strong>A:</strong> CandleCue helps traders stay disciplined by tracking candle-close times on their selected
           timeframe—currently available for 1m, 2m, 3m, 5m, 15m, 30m, 1h, or 4h. By setting precise alerts, it helps reduce
@@ -83,19 +83,41 @@
 
           <div class="faq-item">
             <p><strong>Q:</strong> Don’t most trading platforms already show countdowns to candle close?</p>
-            <p><strong>A:</strong> Sort of — but you're still forced to watch the screen and track those countdowns manually.
-              CandleCue enhances this by not only showing the countdown visually, but also providing audio and vibration cues at
-              the moment each candle closes—so you can stay fully focused on your process, whether that’s reading price action,
+            <p><strong>A:</strong> In a way, yes — but you're still forced to watch the screen and keep mental tabs on the countdowns manually.
+              CandleCue enhances this by not only showing the countdown visually, but also providing audio and vibration cues when each candle closes—so you can stay fully focused on your process, whether that’s reading price action,
               confirming chart patterns or indicators, or analyzing footprint or Bookmap-style signals.<br><br>
           
               CandleCue also allows you to customize alert layers on top of your main timeframe. By default, you’ll receive a
-              notification at the close of your selected timeframe. But you can also schedule multiple early alerts—such as 5
-              minutes before and/or 1 minute before—to help you anticipate candle closes with precision.<br><br>
-          
-              In addition, you can gain microstructure insight by systematically layering early alerts. For example, if your main
-              timeframe is 4 hours and you enable 1-hour, 2-hour, and 3-hour early alerts, CandleCue effectively gives you a
-              1-hour sub-timeframe layer to track market rhythm across both timeframes.</p>    </div>
+              notification at the close of your selected timeframe. By layering sub-timeframe bars, you can gain microstructure insight into smaller timeframe perspective. For example, if your main
+              timeframe is 1 hour and layer 15 min sub-timeframe, CandleCue gives you 15-min bar close alerts every 15 min to track market rhythm across both timeframes.</p>    </div>
 
+<div class="faq-item">
+  <p><strong>Q:</strong> Can I layer more than one sub-timeframes?</p>
+  <p><strong>A:</strong> Of course. To illustrate this piont, you can layer 5 min, 15 min, 30 min, for instance, into your 60-min (1 hour) main time interval. <br><br>
+  </p>
+</div>
+
+<div class="faq-item">
+  <p><strong>Q:</strong> If I layer more than one sub-timeframes, what happens multiple sub-timeframes bars close at the same time?</p>
+  <p><strong>A:</strong> If multiple sub-timeframe bars close at the same time, CandleCue will only send the alert for the largest (i.e. highest) timeframe at
+  that moment. For instance, if your main-time frame is 1 hour and you choose 15 and 30-min sub-timeframe layers, then at the 30 min mark, you'd get the 30-min bar close notification (instead of the 15-min bar close alert).  <br> <br> Why do we employ this implementation? Besides avoding redunant noise,
+  <br><br> 1. Higher Timeframes = Stronger Signals. So, the traders can focus on what matters most in that pivotal moments. <br><br> 2. Hierachy of Decision-Making. Many traders use top-down analysis:
+  <br>
+  • Higher timeframes = trend direction.
+  <br>
+  • Lower timeframes = entry/exit refinement.
+  <br>
+  Thus, By emphasizing the largest closing timeframe, CandleCue will help the traders aligned with the bigger picture, which is especially
+  important for momentum-based or breakout strategies.
+  </p>
+</div>
+
+
+<div class="faq-item">
+  <p><strong>Q:</strong> What is a custom notification? Is that the same as a layered notification?</p>
+  <p><strong>A:</strong> Custom notifications can be set either independently or along with your existing layered notifications. For instace, you can set "1 minute before" custom alert to let the app notify you precisely 1 minute before your main candle close, so that you can be both mentally and physcially prepared before your main candle closes. 
+  </p>
+</div>
       <div class="faq-item">
         <p><strong>Q:</strong> I'm a swing trader and trade off the 4-hour timeframe. Can I customize when each 4-hour candle
           starts?</p>
@@ -117,7 +139,7 @@
         <p><strong>A:</strong> Apple enforces a system-wide limit of 64 scheduled notifications per app. Depending on your
           selected timeframe and any layered alerts, you may reach this limit after a certain number of candles. For example,
           if you're using a 4-hour main timeframe with 1-hour layered alerts to also track the 1-hour chart, you’ll be
-          prompted approximately 60 hours after the timer starts. When that happens, CandleCue will play a distinct sound
+          prompted approximately 60 hours after the timer starts (that is, 1 notification per hour for 60 hours). When that happens, CandleCue will play a distinct sound
           alert and prompt you to return to the main page—so it can refresh and schedule the next set of alerts for the
           following 60 hours. The timer itself continues running in the background without interruption.</p></div>
 
@@ -144,6 +166,150 @@
                 the timer is running or not. Our goal is to help you stay focused, not interrupted.</p>      </div>
 
     <p>If you have any questions, feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
+  </div> -->
+
+  <div class="faq-item">
+    <p><strong>Q:</strong> What is CandleCue used for?</p>
+    <p><strong>A:</strong> CandleCue helps traders stay disciplined by tracking candle-close times on their selected
+      timeframe—currently available for 1m, 2m, 3m, 5m, 15m, 30m, 1h, or 4h. By setting precise alerts, it reduces
+      impulsive trades and keeps you aligned with your strategy—one candle at a time.</p>
   </div>
+  
+  <div class="faq-item">
+    <p><strong>Q:</strong> Don’t most trading platforms already show countdowns to candle close?</p>
+    <p><strong>A:</strong> In a way, yes—but you're still forced to watch the screen and to manually keep mental tabs.
+      CandleCue enhances this by providing visual, audio, and vibration cues at each candle close—so you can stay focused
+      on your trading process, whether that’s reading price action, confirming chart patterns, or analyzing footprint or
+      Bookmap-style data.<br><br>
+      CandleCue also allows you to customize layered alerts on top of your main timeframe. By default, you’ll get a
+      notification at each main candle close. By adding sub-timeframe layers, you gain additional insight into market
+      microstructure. For example, if your main timeframe is 1 hour and you add a 15-minute layer, you’ll receive
+      15-minute bar close alerts throughout the hour to track market rhythm across both timeframes.</p>
+  </div>
+  
+  <div class="faq-item">
+    <p><strong>Q:</strong> Can I layer more than one sub-timeframe?</p>
+    <p><strong>A:</strong> Absolutely. For example, you can layer 5-minute, 15-minute, and 30-minute sub-timeframes into
+      your 60-minute (1-hour) main interval.</p>
+  </div>
+  
+  <div class="faq-item">
+    <p><strong>Q:</strong> If I layer multiple sub-timeframes, what happens when several bars close at the same time?</p>
+    <p><strong>A:</strong> CandleCue will send only the alert for the largest (i.e., highest) sub-timeframe at that
+      moment. For instance, if your main timeframe is 1 hour and you layer both 15-minute and 30-minute alerts, you’ll receive the 30-minute bar close alert at each half-hour mark (e.g., 9:30, 10:30).<br><br>
+      Why do we do this? Besides avoiding redundant noise:<br><br>
+      1. <strong>Higher Timeframes = Stronger Signals.</strong> This keeps you focused on what matters most in pivotal
+      moments.<br><br>
+      2. <strong>Hierarchy of Decision-Making.</strong> Many traders use top-down analysis:<br>
+      • Higher timeframes = trend direction<br>
+      • Lower timeframes = entry/exit refinement<br><br>
+      By emphasizing the largest closing timeframe, CandleCue keeps you aligned with the broader trend—crucial for
+      momentum or breakout strategies.</p>
+  </div>
+  
+  <!-- <div class="faq-item">
+    <p><strong>Q:</strong> What is a custom notification? Is that the same as a layered notification?</p>
+    <p><strong>A:</strong> Custom notifications are recurring alerts that trigger at a specific time relative to your main
+      candle close—for example, exactly “1 minute before.” You can choose one or multiple custom alerts (e.g., 5 minutes
+      before and 1 minute before), and they will repeat consistently with each new candle.<br><br>
+      Layered notifications, on the other hand, are tied to additional sub-timeframe closes—such as every 15 minutes or
+      every 30 minutes—on top of your main timeframe. These help you track market structure across multiple
+      intervals.<br><br>
+      You can use custom and layered notifications independently or combine them. For instance, you could receive a
+      layered alert every 15 minutes while also getting a “1 minute before” custom alert to prepare just before your main
+      candle closes.
+    
+    
+    </p>
+    </div> -->
+  
+    <div class="faq-item">
+      <p><strong>Q:</strong> What is a custom notification? Is that the same as a layered notification?</p>
+      <p><strong>A:</strong> Custom notifications are recurring alerts that trigger at a specific time relative to your main
+        candle close—for example, exactly “1 minute before.” You can choose one or multiple custom alerts (e.g., 5 minutes
+        before and 1 minute before), and they will repeat consistently with each new candle.<br><br>
+        Layered notifications, on the other hand, are tied to additional sub-timeframe closes—such as every 5 minutes, 15
+        minutes, or 30 minutes—on top of your main timeframe. These help you track market structure across multiple
+        intervals.<br><br>
+        You can use custom and layered notifications independently or combine them. For instance, you could receive a
+        layered alert every 15 minutes while also getting a “1 minute before” custom alert to prepare just before your main
+        candle closes.<br><br>
+        If a custom alert happens to coincide with a layered alert—such as a 5-minute custom alert overlapping with a
+        5-minute sub-timeframe layer—CandleCue will prioritize the layered alert message at that moment to avoid duplicate
+        notifications.</p>
+      </div>
+  <div class="faq-item">
+    <p><strong>Q:</strong> I'm a swing trader using the 4-hour timeframe. Can I customize when each 4-hour candle starts?
+    </p>
+    <p><strong>A:</strong> Yes. By default, CandleCue uses a 4-hour cycle starting from UTC 0—a common baseline for crypto
+      traders. You can set a custom start time in Settings (e.g., 9:00 AM or 9:30 AM local time) in 30-minute increments
+      to match your preferred trading hours or market session.</p>
+  </div>
+  
+  <div class="faq-item">
+    <p><strong>Q:</strong> Can I use CandleCue in the background?</p>
+    <p><strong>A:</strong> Yes. Once activated, both the timer and alerts continue to function even when the app is in the background or your
+      phone is asleep. In fact, this is one of CandleCue’s core features—helping you stay synced to market rhythms even when away
+      from your screen.  Occasionally, CandleCue may prompt you to the main page to continue receiving notifications, but the timer itself runs continouosly in the backgound at all times.</p>
+  </div>
+  
+ 
+  <div class="faq-item">
+    <p><strong>Q:</strong> When will I be prompted to return to the main page?</p>
+    <p><strong>A:</strong> Apple enforces a maximum of 64 scheduled notifications limit per app at any
+      one time.  Depending on your selected timeframe and any layered alerts, you may reach this limit after a certain number of candles.
+     For example, if you're using a 4-hour main timeframe with 1-hour layered alerts, you'll be prompted approximately 60 hours after the timer starts.  When this happens, CandleCue will play a distinct sound and prompt you to return to the main page. By simply tapping on the prompt or reopening the app, the next batch of notifications will be scheduled instantly, and alerts
+      will continue. 
+      The timer itself continues running in the background the entire time, and no data or alert preferences are lost—just
+      a quick refresh to keep the system flowing.</p>
+    </div>
+
+
+  <!-- <div class="faq-item">
+    <p><strong>Q:</strong> Will the timer run indefinitely? What about alerts?</p>
+    <p><strong>A:</strong> The timer runs continuously in the background, even if the app is closed or your phone is
+      asleep. However, due to a system limitation, Apple allows a maximum of 64 scheduled notifications per app at a time.
+      This isn’t a permanent cap—it just means CandleCue can queue up to 64 alerts in a single scheduling session.<br><br>
+      Once the queue is exhausted (for example, after ~60 hours if you're using a 4-hour main timeframe with 1-hour
+      layered alerts), CandleCue will play a distinct sound and prompt you to return to the app. By simply tapping on that
+      prompt notification or manually reopening the app, the next batch of notifications will be scheduled instantly, and
+      alerts will continue, without needing to reset yoru alert preferences.<br><br>
+       </p>
+    </div> -->
+
+    <!-- <div class="faq-item">
+      <p><strong>Q:</strong> Can I use CandleCue in the background? Will alerts still work if I don’t keep the app open?</p>
+      <p><strong>A:</strong> Yes. Both the timer and alerts continue to function even when the app is in the background or
+        your phone is asleep. CandleCue is designed to keep you in sync with the market, even when you're away from the screen.<br><br>
+    
+        Due to a system limitation, CandleCue can schedule up to 64 notifications at a time. When that limit is
+        reached—typically after several dozen candles—the app will play a distinct sound and prompt you to reopen it. Doing
+        so instantly refreshes the next batch of alerts. The timer stays active the entire time, and no settings or data are
+        lost.</p>
+      </div> -->
+
+  <div class="faq-item">
+    <p><strong>Q:</strong> Does CandleCue require an internet connection?</p>
+    <p><strong>A:</strong> No. CandleCue runs entirely offline using your device’s internal system clock. You only need
+      internet access to download the app, receive updates, or access support links like the Privacy Policy or Terms of
+      Service.</p>
+  </div>
+  
+  <div class="faq-item">
+    <p><strong>Q:</strong> Does CandleCue track my data?</p>
+    <p><strong>A:</strong> No. CandleCue does not collect, store, or transmit any personal data. Your use is completely
+      private.</p>
+  </div>
+  
+  <div class="faq-item">
+    <p><strong>Q:</strong> I don't see any ads in the app. Will CandleCue ever introduce ads?</p>
+    <p><strong>A:</strong> No. CandleCue is designed to support focused, distraction-free trade execution and will never
+      include ads—whether the timer is running or not. Our goal is to help you stay focused, not interrupted.</p>
+  </div>
+  
+  <p>If you have any questions, feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
+
+
+
 </body>
 </html>
