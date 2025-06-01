@@ -42,33 +42,6 @@
       margin: 0 auto;
     }
 
-    /* h1, h2 {
-      color: #ff7300;
-    }
-
-    a {
-      color: #ff7300;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-    
-    .faq-item {
-  border-bottom: 1px solid #333;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-.faq-item h3 {
-  color: #ff7300;
-  font-size: 20px;
-  margin-bottom: 8px;
-} */
 
 h1 {
       color: #ff7300;
@@ -129,212 +102,6 @@ h1 {
     <h1>FAQ</h1>
 
  
-<!-- 
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>What is CandleCue used for?</h3>
-    <p>
-      CandleCue helps traders stay disciplined by providing structured alerts to candle-close times on their selected timeframe—currently
-      supporting 1m, 2m, 3m, 5m, 15m, 30m, 1h, and 4h.  Pre-close signals and layered cues from shorter
-      sub-timeframes provide
-      added awareness within each candle. By setting precise, structured alerts, CandleCue is designed to reduce impulsive
-      trades and help you stay aligned with your strategy—candle by candle.
-    </p>
-    </div>
-  
- 
-
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>Don’t most trading platforms already show countdowns to candle close?</h3>
-    <p>
-      Most platforms show candle countdowns—but they’re easy to miss, often displayed in small fonts that demand constant
-      visual attention. Even more limiting, these countdowns are tied to the chart you’re actively
-      viewing—meaning you have to keep that specific symbol open to stay on time.
-      CandleCue enhances your charting experience by delivering clear, hands-free alerts through audio and haptic
-      feedback—so you stay in sync without staring at the countdown or keeping one chart always in view.
-      Optional pre-close signals and layered sub-timeframe cues further ease the cognitive load of manual tracking while
-      enhancing market awareness and timing.
-      <em>Ideal for active traders who want to focus on preparation and execution—not countdowns—and swing traders who
-        want to stay alert only when it counts.</em>
-    </p>
-    </div>
-  
- 
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>What are custom alerts, and why do they matter?</h3>
-    <p>
-      Ever missed an entry or exit because your attention was on something else—an indicator, setup, or analysis—and the
-      candle closed before you were ready?
-      Custom pre-close alerts give you a head start—reminding you to refocus and prepare before the candle ends, so you’re
-      ready to act when it counts.
-      For example, you can set recurring reminders like “2 minutes before” to review your checklist, confirm confluence,
-      or get into execution mode.
-      You can even set multiple early alerts (e.g., 5 minutes and 1 minute before) to match your personal routine. These
-      cues repeat every candle, helping you stay sharp, consistent, and timely.
-    </p>
-    </div>
-
- 
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>What are layered alerts, and how do they differ from custom alerts?</h3>
-    <p> Market structure often shifts before your main timeframe candle closes—making it easy to miss developing setups or
-    misread early signals. Layered alerts solve this by triggering at actual sub-timeframe bar closes—like every 5 or 15
-    minutes within a 1-hour candle.
-    
-    Instead of constantly flipping between different timeframes and reacting to unfinished candles, you get precise, confirmation-based
-    signals across multiple timeframes. For example, if your main candle is 1 hour, layering 15-minute bars gives you
-    actionable structure every quarter hour.
-    
-    Unlike custom alerts—which notify you before a main candle closes—layered alerts provide smaller, completed timeframe
-    cues. Together, they give you a structured, multi-layered view of market behavior—delivered with precision and without
-    distraction.</p>
-    </div>
-
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>Can I layer more than one sub-timeframe?</h3>
-    <p>Absolutely. For example, you can layer 5-minute, 15-minute, and 30-minute sub-timeframes into your 60-minute
-      (1-hour) main interval. This allows you to receive multiple bar-close notifications within each hour—offering a more
-      detailed view of market structure across different time horizons.</p>
-  </div>
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>If I layer multiple sub-timeframes, what happens when several timeframes close at the same time?</h3>
-    <p>When multiple sub-timeframe bars close simultaneously, CandleCue will send only the notification for the largest (i.e.,
-      highest) timeframe at that moment. For example, if your main timeframe is 1 hour and you’ve layered both 15-minute
-      and 30-minute intervals, you’ll receive the 30-minute alert at the half-hour marks (e.g., 9:30, 10:30), rather than
-      the 15-minute one.<br><br>This helps avoid redundant signals and keeps the focus on higher timeframe closes, which
-      often carry more weight in trade planning. It also reflects how many traders prioritize higher timeframes for trend
-      context, while using lower ones for execution.</p>
-  </div>
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>I'm a swing trader using the 4-hour timeframe. Can I customize when each 4-hour candle starts?</h3>
-    <p>Yes. By default, CandleCue uses a 4-hour cycle starting from UTC 0—a common baseline for crypto traders. You can
-      set a custom start time in Settings (e.g., 9:00 AM or 9:30 AM local time) in 30-minute increments to match your
-      preferred trading hours or market session.</p>
-  </div>
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>Can I use CandleCue in the background?</h3>
-    <p>Yes. Once activated, both the timer and alerts continue to function even when the app is in the background or your
-      phone is asleep. In fact, this is one of CandleCue’s core features—helping you stay synced to market rhythms even
-      when away from your screen. Occasionally, CandleCue may prompt you to the main page to continue receiving
-      notifications, but the timer itself runs continouosly in the background at all times.</p>
-  </div>
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>When will I be prompted to return to the main page?</h3>
-    <p>Apple enforces a maximum of 64 scheduled notifications limit per app at any one time. Depending on your selected
-      timeframe and any alerts, you may reach this limit after a certain number of candles. For example, if you're
-      using a 4-hour main timeframe with 1-hour layered alerts, you'll be prompted approximately 60 hours after the timer
-      starts. When this happens, CandleCue will play a distinct sound and prompt you to return to the main page. By simply
-      tapping on the prompt or reopening the app, the next batch of notifications and alerts will be scheduled instantly, and you will continouosly receive them. The timer itself continues running in the background the entire time, and no data or alert
-      preferences are lost.</p>
-  </div>
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>How is the “Current Time” determined, and how can I change it?</h3>
-    <p>
-      CandleCue automatically detects your device’s local time and displays the “Current Time” using the correct UTC
-      offset for your region.
-      If you prefer to track time based on another region—such as a major financial center—you can change this in Settings
-      under “Select UTC Offset.”
-    </p>
-    <p>
-      UTC offset options range from UTC−10 to UTC+13, including fractional time zones like UTC+5:30 and UTC+9:30. This
-      lets you align your alerts with the market hours you care about most.
-    </p>
-    <ul>
-      <li><strong>UTC−10:</strong> Honolulu (Hawaiian Islands)</li>
-      <li><strong>UTC−8:</strong> Los Angeles (non-DST), Vancouver (non-DST)</li>
-      <li><strong>UTC−6:</strong> Mexico City</li>
-      <li><strong>UTC−5:</strong> New York (non-DST), Toronto (non-DST), Cancún, Lima, Bogotá</li>
-      <li><strong>UTC+0:</strong> London (non-DST), Accra, Lisbon</li>
-      <li><strong>UTC+1:</strong> Berlin, Paris, Rome, Madrid</li>
-      <li><strong>UTC+2:</strong> Athens, Cairo, Johannesburg</li>
-      <li><strong>UTC+3:</strong> Moscow, Riyadh, Istanbul, Nairobi</li>
-      <li><strong>UTC+4:</strong> Dubai, Baku</li>
-      <li><strong>UTC+5:30:</strong> Delhi, Mumbai, Colombo</li>
-      <li><strong>UTC+8:</strong> Singapore, Beijing, Kuala Lumpur, Perth</li>
-      <li><strong>UTC+9:</strong> Tokyo, Seoul</li>
-      <li><strong>UTC+9:30:</strong> Adelaide, Darwin</li>
-      <li><strong>UTC+10:</strong> Sydney, Port Moresby</li>
-      <li><strong>UTC+13:</strong> Nukuʻalofa (Tonga), Kiritimati (Kiribati)</li>
-    </ul>
-    <p>
-      This flexibility allows you to stay in sync with the trading hours of any global market—whether it’s your local
-      exchange or one halfway across the world.
-    </p>
-    <p>
-      <strong>Note:</strong> The “Select UTC Offset” setting only affects how the current time is displayed. It does not
-      change how alerts or timer intervals are calculated. Your candles and alerts will continue to follow the same logical
-      timing, regardless of the selected display offset.</p>
-    </div>
-
-
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>Which languages are supported in the app?</h3>
-    <p> CandleCue currently supports the following languages, aligned with their most common regions:
-    <ul style="margin-top: 10px;">
-      <li><strong>Arabic:</strong> Saudi Arabia, Egypt, UAE</li>
-      <li><strong>German:</strong> Germany, Austria, Switzerland</li>
-      <li><strong>English:</strong> United States, United Kingdom, Canada, Australia, India</li>
-      <li><strong>Spanish:</strong> Spain, Mexico, Argentina, Colombia</li>
-      <li><strong>French:</strong> France, Belgium, Switzerland, Canada (Quebec)</li>
-      <li><strong>Hindi:</strong> India</li>
-      <li><strong>Italian:</strong> Italy</li>
-      <li><strong>Japanese:</strong> Japan</li>
-      <li><strong>Korean:</strong> South Korea</li>
-      <li><strong>Chinese (Simplified):</strong> Mainland China, Singapore</li>
-      <li><strong>Chinese (Traditional):</strong> Taiwan, Hong Kong, Macau</li>
-    </ul>
-    If you’d like to see support for another language, please contact us at <a
-      href="mailto:support@candlecue.app">support@candlecue.app</a>.
-    </p>
-  </div>
-
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>Which languages are supported in the app?</h3>
-    <details>
-      <summary style="cursor: pointer; font-weight: bold;">View supported languages</summary>
-      <ul style="margin-top: 10px; margin-left: 20px;">
-        <li><strong>Arabic:</strong> Saudi Arabia, Egypt, UAE</li>
-        <li><strong>German:</strong> Germany, Austria, Switzerland</li>
-        <li><strong>English:</strong> United States, United Kingdom, Canada, Australia, India</li>
-        <li><strong>Spanish:</strong> Spain, Mexico, Argentina, Colombia</li>
-        <li><strong>French:</strong> France, Belgium, Switzerland, Canada (Quebec)</li>
-        <li><strong>Hindi:</strong> India</li>
-        <li><strong>Italian:</strong> Italy</li>
-        <li><strong>Japanese:</strong> Japan</li>
-        <li><strong>Korean:</strong> South Korea</li>
-        <li><strong>Chinese (Simplified):</strong> Mainland China, Singapore</li>
-        <li><strong>Chinese (Traditional):</strong> Taiwan, Hong Kong, Macau</li>
-      </ul>
-    </details>
-    <p>If you’d like to see support for another language, please contact us at
-      <a href="mailto:support@candlecue.app">support@candlecue.app</a>.
-    </p>
-    </div>
-  
-
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>Does CandleCue require an internet connection?</h3>
-    <p>No. CandleCue runs entirely offline using your device’s internal system clock. You only need internet access to
-      download the app, receive updates, or access support links like the Privacy Policy or Terms of Service.</p>
-  </div>
-  
-  <div class="faq-item" style="border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-    <h3>Does CandleCue track my data?</h3>
-    <p>No. CandleCue does not collect, transmit, or store any personal data on external servers. Your use of the app is
-    completely private.
-    
-    The only data saved is your selected preferences—such as alert settings, UTC offset, or language choice—and even that is
-    stored locally on your device. Nothing ever leaves your phone, ensuring a streamlined and secure experience.</p>
-  </div>
- 
-<p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p> -->
-
 
 <details class="faq-item">
   <summary>What is CandleCue used for?</summary>
@@ -374,18 +141,26 @@ h1 {
 
 <details class="faq-item">
   <summary>What are layered alerts, and how do they differ from custom alerts?</summary>
-  <p>Market structure often shifts before your main timeframe candle closes—making it easy to miss developing setups or
-    misread early signals. Layered alerts solve this by triggering at actual sub-timeframe bar closes—like every 5 or 15
-    minutes within a 1-hour candle.</p>
-  <p>Instead of constantly flipping between different timeframes and reacting to unfinished candles, you get precise,
+  <p>
+    Market structure often shifts before a main candle closes—making it easy to miss developing setups or misread early
+    signals. Even so,  two candles on the same timeframe may look identical but tell completely different
+    stories underneath. Layered alerts solve this by triggering at the close of actual sub-timeframe bars—like every 5 or
+    15 minutes within
+    a 1-hour candle.
+    </p>
+  <p>
+    This means you don’t have to constantly flip timeframes or react prematurely to unfinished candles. Instead, you get
     confirmation-based
-    signals across multiple timeframes. For example, if your main candle is 1 hour, layering 15-minute bars gives you
-    actionable structure every quarter hour.</p>
-  <p>Unlike custom alerts—which notify you before a main candle closes—layered alerts provide smaller, completed
-    timeframe
-    cues. Together, they give you a structured, multi-layered view of market behavior—delivered with precision and
-    without
-    distraction.</p>
+    signals across multiple layers. For example, with a 1-hour main candle and 15-minute layering, you’ll receive
+    actionable cues
+    every quarter hour.
+  </p>
+  <p>
+    Unlike custom alerts—which notify you shortly before your main candle closes—layered alerts deliver completed
+    sub-timeframe signals.
+    Used together, they offer a structured, multi-timeframe view of market behavior—clear, precise, and
+    distraction-free.
+  </p>
 </details>
 
 <details class="faq-item">
@@ -409,29 +184,65 @@ h1 {
 
 <details class="faq-item">
   <summary>I'm a swing trader using the 4-hour timeframe. Can I customize when each 4-hour candle starts?</summary>
-  <p>Yes. By default, CandleCue uses a 4-hour cycle starting from UTC 0—a common baseline for crypto traders. You can
-    set a custom start time in Settings (e.g., 9:00 AM or 9:30 AM local time) in 30-minute increments to match your
-    preferred trading hours or market session.</p>
+  <p>
+    Certainly. By default, CandleCue uses a 4-hour cycle starting from UTC+0—a common baseline for crypto traders.
+    To change this:
+  </p>
+  <ul>
+    <li>Go to <strong>Settings</strong></li>
+    <li>Under <strong>Select 4-Hour Block</strong>, choose <strong>Custom</strong></li>
+    <li>Then select your desired <strong>Custom Start Time</strong> (e.g., 9:00 AM or 9:30 AM) in 30-minute increments
+    </li>
+  </ul>
+  <p>
+    This allows you to align your candle timing with your local trading hours or a preferred market session.
+  </p>
 </details>
 
 <details class="faq-item">
-  <summary>Can I use CandleCue in the background?</summary>
-  <p>Yes. Once activated, both the timer and alerts continue to function even when the app is in the background or your
-    phone is asleep. In fact, this is one of CandleCue’s core features—helping you stay synced to market rhythms even
-    when away from your screen. Occasionally, CandleCue may prompt you to the main page to continue receiving
-    notifications, but the timer itself runs continuously in the background at all times.</p>
+  <summary>Does CandleCue still work when my phone is asleep or I’m away from the app?</summary>
+  <p>
+    Yes. Once activated, both the timer and alerts continue to function even when the app is running in the
+    background—including when your phone is asleep. In fact, alerts will still come through on schedule—even if you’ve accidentally swiped CandleCue away from your recent
+    apps list (i.e., force-quit). Tapping an alert or reopening
+    the
+    app will take you right where you left off.
+  </p>
+  <p>
+    This background support is one of CandleCue’s key features—helping traders stay in tune with market rhythm, whether
+    actively monitoring charts, stepping away briefly, or trading longer timeframes—without needing to worry about
+    whether the app is open or the phone is asleep.
+  </p>
+  <p>
+    If the app has been in the background for an extended period of time, CandleCue may send a friendly reminder to reopen the app to
+    continue receiving notifications, but the timer itself runs continuously in the background at all times.
+  </p>
 </details>
 
 <details class="faq-item">
-  <summary>When will I be prompted to return to the main page?</summary>
-  <p>Apple enforces a maximum of 64 scheduled notifications limit per app at any one time. Depending on your selected
-    timeframe and any alerts, you may reach this limit after a certain number of candles. For example, if you're
-    using a 4-hour main timeframe with 1-hour layered alerts, you'll be prompted approximately 60 hours after the timer
-    starts. When this happens, CandleCue will play a distinct sound and prompt you to return to the main page. By simply
-    tapping on the prompt or reopening the app, the next batch of notifications and alerts will be scheduled instantly,
-    and you will continuously receive them. The timer itself continues running in the background the entire time, and no
-    data or alert
-    preferences are lost.</p>
+  <summary>Why does CandleCue sometimes ask me to reopen the app?</summary>
+  <!-- <p>
+    iOS enforces a maximum of 64 scheduled notifications per app at any one time. To work within this limit, CandleCue
+    automatically refreshes upcoming alerts after each candle close while the app is open—ensuring that nearly a full
+    set of 64 alerts is always ready before going into the background.
+  </p>
+  <p>
+    If the app stays in the background for an extended period, these preloaded alerts may eventually run out depending
+    on your selected timeframe and alert settings. 
+   </p> -->
+    
+  <p>
+    iOS allows only 64 scheduled notifications per app. If CandleCue goes into the background and stays there for an
+    extended
+    period, those scheduled alerts may eventually run out—depending on your selected timeframe and alert settings. For
+    example, this might happen after ~60 hours with a 4-hour main timeframe and 1-hour layered alerts.
+  </p>
+  <p>
+    When that happens, CandleCue sends a gentle reminder to reopen the app. Just tap the
+    prompt (or open the app manually) to reload alerts instantly. Your timer keeps running the entire time, and none of
+    your settings are lost.
+    </p>
+ 
 </details>
 
 <details class="faq-item">
@@ -445,8 +256,7 @@ h1 {
     region—such as a major financial center or preferred market.
   </p>
   <p>
-    UTC offset options range from UTC−10 to UTC+13, including fractional time zones like UTC+5:30 or UTC+9:30. This
-    lets you align your time display with the regions or markets that matter to you.
+    UTC offset options range from UTC−10 to UTC+13, including fractional time zones like UTC+5:30 or UTC+9:30.  
   </p>
   <ul>
     <li><strong>UTC−10:</strong> Honolulu (Hawaiian Islands)</li>
@@ -460,10 +270,10 @@ h1 {
     <li><strong>UTC+4:</strong> Dubai, Baku</li>
     <li><strong>UTC+5:30:</strong> Delhi, Mumbai, Colombo</li>
     <li><strong>UTC+7:</strong> Hanoi, Bangkok, Jakarta</li>
-    <li><strong>UTC+8:</strong> Singapore, Beijing, Kuala Lumpur, Perth</li>
+    <li><strong>UTC+8:</strong> Perth, Singapore, Beijing, Kuala Lumpur</li>
     <li><strong>UTC+9:</strong> Tokyo, Seoul</li>
     <li><strong>UTC+9:30:</strong> Adelaide (non-DST), Darwin</li>
-    <li><strong>UTC+10:</strong> Sydney, Port Moresby</li>
+    <li><strong>UTC+10:</strong> Brisbane, Sydney (non-DST), Port Moresby</li>
     <li><strong>UTC+13:</strong> Nukuʻalofa (Tonga), Kiritimati (Kiribati)</li>
   </ul>
   <p><strong>Note:</strong> The UTC offset remains fixed until you change it manually. It does not adjust automatically
