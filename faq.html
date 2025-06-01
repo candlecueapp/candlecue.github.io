@@ -71,22 +71,48 @@ h1 {
     }
 
     details.faq-item summary {
-      cursor: pointer;
-      font-size: 18px;
-      color: #ff7300;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
+  cursor: pointer;
+  font-size: 18px;
+  color: #ff7300;
+  font-weight: bold;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 1.5em; /* space for triangle */
+}
 
-    details.faq-item[open] summary {
-      margin-bottom: 12px;
-    }
+details.faq-item[open] summary {
+  margin-bottom: 12px;
+}
+
+/* Triangle icon */
+details.faq-item summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 0.9em;
+  color: #ff7300;
+  transition: transform 0.3s ease;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+/* Rotate triangle when open */
+details.faq-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
 
     details.faq-item p,
     details.faq-item ul {
       margin-top: 8px;
       padding-left: 10px;
     }
+
+
+
+
+
   </style>
 </head>
 <body>
