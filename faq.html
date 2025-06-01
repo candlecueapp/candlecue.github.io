@@ -92,13 +92,29 @@ details.faq-item summary .arrow {
   color: #ff7300;
 }
 
-/* Remove native marker */
-details.faq-item summary::-webkit-details-marker {
-  display: none;
+ 
+ 
+/* Hide the native disclosure triangle completely */
+details.faq-item summary::-webkit-details-marker,
+details.faq-item summary::marker {
+  display: none !important;
+  color: transparent !important;
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  content: none !important;
+  appearance: none !important;
 }
 
-
-
+details.faq-item summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 18px;
+  color: #ff7300;
+  font-weight: bold;
+  padding: 0.3em 0;
+}
 
   </style>
 
@@ -146,7 +162,7 @@ details.faq-item summary::-webkit-details-marker {
     <span class="faq-question"> Don’t most trading platforms already show countdowns to candle close?</span>
   </summary> -->
   <summary>Don’t most trading platforms already show countdowns to candle close?</summary>
-  <div class = ="faq-answer"> 
+  <div class  ="faq-answer"> 
  
   <p>
     Most platforms do show countdowns—but they’re often small, tucked away, and easy to miss. Watching them requires
