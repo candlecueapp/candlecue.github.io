@@ -66,112 +66,40 @@ h1 {
 
 
 
+
+
+
     details.faq-item {
   border-bottom: 1px solid #333;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
 
-/* details.faq-item summary {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 18px;
-  color: #ff7300;
-  font-weight: bold;
-  margin-bottom: 8px;
-  list-style: none;
-  padding: 0.4em 0;
-} */
-
-/* Summary styling */
 details.faq-item summary {
   cursor: pointer;
   font-size: 18px;
   color: #ff7300;
   font-weight: bold;
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 1.5em;
-  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
-/* Remove default triangle on all platforms */
-/* summary::-webkit-details-marker,
-summary::marker {
-  display: none;
-} */
-
-/* Hide native marker */
-summary::-webkit-details-marker,
-summary::marker {
-  display: none;
-  content: none;
-}
-
-
-/* Custom triangle as an inline span */
-/* .faq-arrow {
+details.faq-item summary .arrow {
   display: inline-block;
-  width: 0;
-  height: 0;
-  margin-right: 10px;
-  border-style: solid;
-  border-width: 6px 0 6px 10px;
-  border-color: transparent transparent transparent #ff7300;
+  transform: rotate(0deg);
   transition: transform 0.3s ease;
-} */
-
-
-
-/* Custom triangle */
-details.faq-item summary::before {
-  content: "▶";
-  position: absolute;
-  left: 0;
-  top: 0.1em;
-  font-size: 0.9em;
   color: #ff7300;
-  transition: transform 0.3s ease;
 }
 
-/* Rotate triangle when open */
-details.faq-item[open] > summary::before {
-  transform: rotate(90deg);
-}
-/* Rotate the arrow when open */
-/* details[open] .faq-arrow {
-  transform: rotate(90deg);
-} */
-
-details.faq-item p,
-details.faq-item ul {
-  margin-top: 8px;
-  padding-left: 10px;
-}
- 
-/* .faq-answer {
-  overflow: hidden;
-  transition: opacity 0.2s ease;
-  opacity: 1;
-} */
-
-.faq-answer {
-  animation: fadeIn 0.25s ease-in-out;
-  padding-left: 10px;
-  margin-top: 8px;
+/* Remove native marker */
+details.faq-item summary::-webkit-details-marker {
+  display: none;
 }
 
-/* details.faq-item:not([open]) .faq-answer {
-  opacity: 0;
-  transition: opacity 0.15s ease;
-} */
 
-/* Animation keyframes to prevent flicker */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-2px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+
+
   </style>
 
 
@@ -179,6 +107,8 @@ details.faq-item ul {
 
 
 </head>
+
+
 <body>
   <!-- Header -->
   <div class="header">
@@ -242,17 +172,17 @@ details.faq-item ul {
 </div>
 </details>
 
-
+<!-- question 3 -->
 
 <details class="faq-item">
   <!-- <summary>
     <span class="faq-arrow"></span>
     <span class="faq-question"> What are custom alerts, and why do they matter?</span>
   </summary> -->
-  <summary>
+  <summary><span class="arrow">▶</span>
       What are custom alerts, and why do they matter? 
   </summary>
-  <div class=="faq-answer">
+ 
 
   <p>
     Ever missed an entry or exit because the candle closed before you were ready?
@@ -269,7 +199,7 @@ details.faq-item ul {
   <p>
     These alerts repeat every candle, helping you stay sharp, consistent, and ready when it matters.
   </p>
-</div>
+ 
 </details>
 
 
@@ -483,6 +413,17 @@ details.faq-item ul {
 
 <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
 </div>
-
+<script>
+  document.querySelectorAll('details.faq-item').forEach(detail => {
+    const arrow = detail.querySelector('.arrow');
+    detail.addEventListener('toggle', () => {
+      if (detail.open) {
+        arrow.style.transform = 'rotate(90deg)';
+      } else {
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+</script>
 </body>
 </html>
