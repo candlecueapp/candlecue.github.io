@@ -110,6 +110,17 @@ details.faq-item ul {
   padding-left: 10px;
 }
  
+.faq-answer {
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+details.faq-item:not([open]) .faq-answer {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+
 
 
   </style>
