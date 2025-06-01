@@ -112,7 +112,17 @@ details.faq-item[open] summary::before {
     }
 
 
+    .faq-question {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 
+.faq-question::-webkit-details-marker,
+.faq-question::marker {
+  display: none !important;
+  content: none !important;
+}
 
 
   </style>
