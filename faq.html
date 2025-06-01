@@ -77,14 +77,18 @@ h1 {
   font-weight: bold;
   margin-bottom: 8px;
   position: relative;
-  padding-left: 1.5em; /* space for triangle */
+  padding-left: 1.5em; /* room for custom triangle */
+  list-style: none; /* important for Firefox */
 }
 
-details.faq-item[open] summary {
-  margin-bottom: 12px;
+/* Completely hide the native triangle across WebKit & others */
+details.faq-item summary::-webkit-details-marker,
+details.faq-item summary::marker {
+  display: none !important;
+  content: none !important;
 }
 
-/* Triangle icon */
+/* Custom triangle */
 details.faq-item summary::before {
   content: "▶";
   position: absolute;
@@ -94,10 +98,8 @@ details.faq-item summary::before {
   color: #ff7300;
   transition: transform 0.3s ease;
 }
-summary::-webkit-details-marker {
-  display: none;
-}
-/* Rotate triangle when open */
+
+/* Rotate when open */
 details.faq-item[open] summary::before {
   transform: rotate(90deg);
 }
