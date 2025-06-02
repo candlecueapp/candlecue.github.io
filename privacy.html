@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Privacy Policy</title>
   <style>
     body {
@@ -11,37 +11,40 @@
       font-family: Arial, sans-serif;
       background-color: #111;
       color: white;
+      -webkit-text-size-adjust: none;
+      -moz-text-size-adjust: none;
+      text-size-adjust: none;
     }
 
     .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #222;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      font-family: Arial, sans-serif;
+    }
 
-.brand {
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-}
+    .brand {
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+    }
 
-.home-link {
-  color: #ff7300;
-  text-decoration: none;
-  font-size: 18px;
-}
+    .home-link {
+      color: #ff7300;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-.right-placeholder {
-  width: 48px;
-  height: 24px;
-}
+    .right-placeholder {
+      width: 80px;
+      height: 32px;
+    }
 
     .content {
       padding: 80px 40px;
@@ -49,9 +52,14 @@
       margin: 0 auto;
     }
 
-    h1,
-    h2 {
+    .content h1 {
+      font-size: 32px !important;
       color: #ff7300;
+    }
+
+    .content p,
+    .content ul {
+      font-size: 16px !important;
     }
 
     a {
@@ -66,6 +74,17 @@
     ul {
       padding-left: 20px;
     }
+
+    @media (orientation: landscape) {
+      .content h1 {
+        font-size: 32px !important;
+      }
+
+      .content p,
+      .content ul {
+        font-size: 16px !important;
+      }
+    }
   </style>
 </head>
 
@@ -74,13 +93,14 @@
   <div class="header">
     <a href="index.html" class="home-link">Home</a>
     <span class="brand">CandleCue</span>
-    <div style="width: 80px; height: 32px;"></div> <!-- Placeholder -->
+    <div class="right-placeholder"></div>
   </div>
 
   <!-- Main Content -->
   <div class="content">
     <h1>Privacy Policy</h1>
-    <p>Your privacy matters to us. CandleCue is designed to work entirely offline and does not collect, store, or transmit
+    <p>Your privacy matters to us. CandleCue is designed to work entirely offline and does not collect, store, or
+      transmit
       any personal data.</p>
     <ul>
       <li>No account or login is required to use CandleCue.</li>
@@ -89,7 +109,7 @@
       <li>All alerts and settings are stored locally on your device and are never shared or transmitted.</li>
     </ul>
     <p>If you have any questions, feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
-    </div>
+  </div>
 </body>
 
 </html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Terms of Service</title>
   <style>
     body {
@@ -10,6 +11,9 @@
       font-family: Arial, sans-serif;
       background-color: #111;
       color: white;
+      -webkit-text-size-adjust: none;
+      -moz-text-size-adjust: none;
+      text-size-adjust: none;
     }
 
     .header {
@@ -36,14 +40,36 @@
       color: white;
     }
 
+    .right-placeholder {
+      width: 80px;
+      height: 32px;
+    }
+
     .content {
       padding: 80px 40px;
       max-width: 800px;
       margin: 0 auto;
     }
 
-    h1, h2 {
+    .content h1 {
+      font-size: 32px !important;
       color: #ff7300;
+    }
+
+    .content h2 {
+      font-size: 24px !important;
+      color: #ff7300;
+    }
+
+    .faq-item h3 {
+      font-size: 20px !important;
+      color: #ff7300;
+      margin-bottom: 8px;
+    }
+
+    .content p,
+    .content ul {
+      font-size: 16px !important;
     }
 
     a {
@@ -58,81 +84,105 @@
     ul {
       padding-left: 20px;
     }
+
     .faq-item {
-  border-bottom: 1px solid #333;
-  padding-bottom: 20px;
-  margin-bottom: 20px; 
-}
-.faq-item h3 {
-  color: #ff7300;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
+      border-bottom: 1px solid #333;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    @media (orientation: landscape) {
+      .content h1 {
+        font-size: 32px !important;
+      }
+
+      .content h2 {
+        font-size: 24px !important;
+      }
+
+      .faq-item h3 {
+        font-size: 20px !important;
+      }
+
+      .content p,
+      .content ul {
+        font-size: 16px !important;
+      }
+    }
   </style>
 </head>
+
 <body>
   <!-- Header -->
   <div class="header">
-    <a href="index.html" class="home-link ">Home</a>
+    <a href="index.html" class="home-link">Home</a>
     <span class="brand">CandleCue</span>
-    <div style="width: 80px; height: 32px;"></div>
+    <div class="right-placeholder"></div>
   </div>
 
   <!-- Main Content -->
-  <!-- <div class="content">
-    <h1>Terms of Service</h1>
-    <p>By using CandleCue, you agree to the terms outlined below. Please read them carefully.</p>
-    <ul>
-      <li>This app is provided "as is" without warranties of any kind.</li>
-      <li>CandleCue does not guarantee trading performance or outcomes.</li>
-      <li>Use of the app is at your own risk and discretion.</li>
-      <li>No personal data is collected, stored, or transmitted by CandleCue.</li>
-      <li>All alerts and settings are stored locally on your device.</li>
-      <li>You agree not to misuse or redistribute the app without permission.</li>
-    </ul>
-    <p>If you have any questions, feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
-  </div> -->
-
-
   <div class="content">
     <h1>Terms of Service</h1>
     <p>By using CandleCue, you agree to the terms outlined below. Please read them carefully.</p>
-  
-    <h2>1. Intended Use</h2>
-    <p>CandleCue is a notification-based app designed to alert users of candle-close timing on selected intervals. It also
-      supports layered sub-timeframe alerts and custom notifications. The app does not provide trading advice or signals.</p>
-  
-    <h2>2. Disclaimer</h2>
-    <ul>
-      <li>This app is provided "as is" without warranties of any kind.</li>
-      <li>CandleCue does not guarantee trading performance or outcomes.</li>
-      <li>Use of the app is at your own risk and discretion.</li>
-    </ul>
-  
-    <h2>3. System Limitations</h2>
-    <p>Due to iOS constraints, the app can schedule up to 64 alerts at a time. To continue receiving notifications beyond
-      that, you must reopen the app to refresh the alert queue.</p>
-  
+
+    <div class="faq-item">
+      <h2>1. Intended Use</h2>
+      <p>CandleCue is a notification-based app designed to alert users of candle-close timing on selected intervals. It
+        also
+        supports layered sub-timeframe alerts and custom notifications. The app does not provide trading advice or
+        signals.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>2. Disclaimer</h2>
+      <ul>
+        <li>This app is provided "as is" without warranties of any kind.</li>
+        <li>CandleCue does not guarantee trading performance or outcomes.</li>
+        <li>Use of the app is at your own risk and discretion.</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h2>3. System Limitations</h2>
+      <p>Due to iOS constraints, the app can schedule up to 64 alerts at a time. To continue receiving notifications
+        beyond
+        that, you must reopen the app to refresh the alert queue.</p>
+    </div>
+
+    <div class="faq-item">
       <h2>4. Privacy</h2>
       <ul>
         <li>No personal data is collected, stored, or transmitted by CandleCue.</li>
         <li>All alerts and settings are stored locally on your device.</li>
       </ul>
       <p>For more details, please review our <a href="privacy.html">Privacy Policy</a>.</p>
-  
-    <h2>5. Acceptable Use</h2>
-    <p>You agree not to misuse, decompile, reverse-engineer, modify, or redistribute CandleCue or any of its components
-      without prior written permission. Unauthorized use may result in termination of access and possible legal action.</p>
-  
-    <h2>6. Changes to Terms</h2>
-    <p>We may update these terms from time to time. Continued use of the app after updates constitutes acceptance of the
-      revised terms.</p>
-  
-    <h2>7. Governing Law</h2>
-    <p>These terms are governed by the laws of Georgia, United States.</p>
-  
-    <h2>8. Contact</h2>
-    <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
     </div>
+
+    <div class="faq-item">
+      <h2>5. Acceptable Use</h2>
+      <p>You agree not to misuse, decompile, reverse-engineer, modify, or redistribute CandleCue or any of its
+        components
+        without prior written permission. Unauthorized use may result in termination of access and possible legal
+        action.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>6. Changes to Terms</h2>
+      <p>We may update these terms from time to time. Continued use of the app after updates constitutes acceptance of
+        the
+        revised terms.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>7. Governing Law</h2>
+      <p>These terms are governed by the laws of Georgia, United States.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>8. Contact</h2>
+      <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
+    </div>
+  </div>
 </body>
+
 </html>
