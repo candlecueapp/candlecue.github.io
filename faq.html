@@ -85,42 +85,35 @@ details.faq-item summary {
   gap: 0.5em;
 }
 
-details.faq-item summary .arrow {
-  display: inline-block;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-  color: #ff7300;
-}
-
- 
- 
-/* Hide the native disclosure triangle completely */
-details.faq-item summary::-webkit-details-marker,
-details.faq-item summary::marker {
-  display: none !important;
-  color: transparent !important;
-  background: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  content: none !important;
-  appearance: none !important;
-}
-
 details.faq-item summary {
+  all: unset;
   display: flex;
   align-items: center;
   gap: 0.5em;
   font-size: 18px;
-  color: #ff7300;
   font-weight: bold;
-  padding: 0.3em 0;
-  background: none !important;
-  outline: none !important;
-  border: none !important;
-  -webkit-tap-highlight-color: transparent;
+  color: #ff7300;
   cursor: pointer;
+  padding: 0.3em 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
+details.faq-item summary .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+  font-size: 1em;
+  color: #ff7300;
+}
+
+/* Remove default disclosure markers */
+details.faq-item summary::-webkit-details-marker,
+details.faq-item summary::marker {
+  display: none !important;
+  content: none !important;
+  color: transparent !important;
+  background: none !important;
+}
 
 
 
