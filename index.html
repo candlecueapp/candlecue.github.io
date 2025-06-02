@@ -1,22 +1,19 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>CandleCue</title>
-<!-- <link rel="stylesheet" href="style.css" /> -->
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #111;
       color: white;
+      -webkit-text-size-adjust: none;
+      -moz-text-size-adjust: none;
+      text-size-adjust: none;
     }
 
     /* Header */
@@ -33,38 +30,37 @@
     }
 
     .brand {
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-}
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+    }
 
     .menu-toggle {
       font-size: 24px;
       cursor: pointer;
     }
 
-  
     .lang-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  margin-right: 10px; /* controls the leftward shift */
-}
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      margin-right: 10px;
+    }
 
-#lang-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 35px;
-  background-color: #333;
-  border: 1px solid #555;
-  padding: 4px 0;
-  z-index: 1001;
-}
+    #lang-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 35px;
+      background-color: #333;
+      border: 1px solid #555;
+      padding: 4px 0;
+      z-index: 1001;
+    }
 
     #lang-menu div {
       padding: 8px 12px;
@@ -106,17 +102,26 @@
       background-color: #444;
     }
 
-
-      /* Main content */
-
+    /* Main content */
     .content {
-  padding: 80px 40px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-    h1,
-    h2 {
+      padding: 80px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      font-size: 32px !important;
       color: #ff7300;
+    }
+
+    .content h2 {
+      font-size: 24px !important;
+      color: #ff7300;
+    }
+
+    .content p,
+    .content ul {
+      font-size: 16px !important;
     }
 
     a {
@@ -125,38 +130,53 @@
 
     ul {
       padding-left: 20px;
-    } 
-    
-    /* Overlay styling */ 
+    }
+
+    /* Ensure consistent font sizes in landscape mode */
+    @media (orientation: landscape) {
+      .content h1 {
+        font-size: 32px !important;
+      }
+
+      .content h2 {
+        font-size: 24px !important;
+      }
+
+      .content p,
+      .content ul {
+        font-size: 16px !important;
+      }
+    }
+
+    /* Overlay styling */
     .overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
-      backdrop-filter: blur(4px);           /* blur effect */
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(0px);
       opacity: 0;
       visibility: hidden;
-      /* transition: opacity 0.3s ease; */
       transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
-      backdrop-filter: blur(0px);
       z-index: 998;
     }
 
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-  backdrop-filter: blur(6px); /* Animate into the blur */
-}
-    
-</style>
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+      backdrop-filter: blur(6px);
+    }
 
-
+    #home {
+      position: relative;
+      top: -70px;
+    }
+  </style>
 </head>
 
 <body>
-
   <!-- Header -->
   <div class="header">
     <span class="menu-toggle" onclick="toggleMenu()">☰</span>
@@ -169,7 +189,7 @@
       </div>
     </div>
   </div>
- 
+
   <div id="drawer" class="drawer">
     <a href="#home" onclick="closeDrawer()">Home</a>
     <a href="#features" onclick="closeDrawer()">Features</a>
@@ -177,92 +197,60 @@
     <a href="#privacy" onclick="closeDrawer()">Privacy Policy</a>
     <a href="#terms" onclick="closeDrawer()">Terms</a>
     <a href="#contact" onclick="closeDrawer()">Contact</a>
-    </div>
+  </div>
 
-    <div id="overlay" class="overlay" onclick="closeDrawer()"></div>
- 
-  
-    <!-- Main Content -->
+  <div id="overlay" class="overlay" onclick="closeDrawer()"></div>
+
+  <!-- Main Content -->
   <div class="content">
-    <!-- <h1 id="home">Welcome to CandleCue</h1> -->
-    <div id="home" style="position: relative; top: -70px;"></div>
-<!-- 
+    <div id="home"></div>
     <h1>Welcome to CandleCue</h1>
-    <p>CandleCue is a financial app that helps you stay disciplined by delivering audio and haptic candle-close alerts on your chosen
-    timeframe and sub-timeframes. Built by traders, for traders, it’s designed to reduce impulsive decisions and keep you
-    aligned with your strategy - one candle at a time.</p>
-
+    <p>
+      <em>CandleCue</em> is a customizable, multi-layer notification app for traders—new and seasoned—who value
+      discipline
+      and timing.
+      By delivering strategically timed alerts across your trading timeframe, it helps you stay focused, follow your
+      plan,
+      and avoid impulsive decisions—one candle at a time.
+    </p>
     <h2 id="features">Features</h2>
     <ul>
-      <li>Precise candle-close alerts for your chosen timeframe</li> 
-      <li>Custom pre-close alerts (e.g., 1 minute before) for your main timeframe</li>
-      <li>Layered sub-timeframe alerts for multi-level tracking</li>
-      <li>Sound and vibration cues to help ensure you never miss an alert</li>
-      <li>Runs in background—even when your phone is asleep</li>
-      </ul> -->
-      <!-- <h1>Welcome to CandleCue</h1> -->
-      <!-- <p> CandleCue is a customizable notification app for serious traders who want to follow their strategy with focus and
-      consistency. It delivers audio and haptic alerts at candle closes on your selected timeframe. With actionable pre-close
-      and sub-timeframe alerts, CandleCue helps you stay grounded and avoid impulsive decisions, while identifying key turning
-      points in market structure, one candle at a time. </p> -->
-
- 
-      <h1>Welcome to CandleCue</h1>
-      <p>
-        <em>CandleCue</em> is a customizable, multi-layer notification app for traders—new and seasoned—who value discipline
-        and timing.
-        By delivering strategically timed alerts across your trading timeframe, it helps you stay focused, follow your plan,
-        and avoid impulsive decisions—one candle at a time.  </p>
-      
-      <h2 id="features">Features</h2>
-      <ul>
-        <li>Precise candle-close alerts for your selected timeframe</li>
-        <li>Customizable pre-close alerts (e.g., 1 minute before) to prepare for key candle events</li>
-        <li>Sub-timeframe alerts within your main timeframe—like 5-minute bar closes during a 15-minute candle—for enhanced
-          multi-timeframe awareness</li>
-        <li>Audio and/or haptic signals to keep you in sync with the market—without constantly needing to check the screen
-        </li>
-        <li>Runs reliably in the background—even when your device is locked or asleep</li> </ul>
-      <h2 id="faq">FAQ</h2>
-      <!-- <p>Have questions about how CandleCue works? Visit the FAQ to learn more about features, alerts, and usage. <a
-          href="faq.html">Read full Q&A →</a></p> -->
-          <p>Have questions about how CandleCue works? Visit our <a href="faq.html">FAQ page</a> to learn more about its features,
-            alerts, and usage.</p>
-
-    <!-- <h2 id="privacy">Privacy Policy</h2> -->
-    <!-- <p>
-      CandleCue does not collect or store personal data. 
-      <a href="privacy.html"> Read full policy →</a>
-    </p> -->
-
+      <li>Precise candle-close alerts for your selected timeframe</li>
+      <li>Customizable pre-close alerts (e.g., 1 minute before) to prepare for key candle events</li>
+      <li>Sub-timeframe alerts within your main timeframe—like 5-minute bar closes during a 15-minute candle—for
+        enhanced
+        multi-timeframe awareness</li>
+      <li>Audio and/or haptic signals to keep you in sync with the market—without constantly needing to check the screen
+      </li>
+      <li>Runs reliably in the background—even when your device is locked or asleep</li>
+    </ul>
+    <h2 id="faq">FAQ</h2>
+    <p>Have questions about how CandleCue works? Visit our <a href="faq.html">FAQ page</a> to learn more about its
+      features,
+      alerts, and usage.</p>
     <h2 id="privacy">Privacy Policy</h2>
-    <p>CandleCue does not collect, store, or transmit any personal data. All preferences and alerts remain on your device.
+    <p>CandleCue does not collect, store, or transmit any personal data. All preferences and alerts remain on your
+      device.
       For full details, please see our <a href="privacy.html">Privacy Policy</a>.</p>
     <h2 id="terms">Terms of Service</h2>
-    <!-- <p>By using CandleCue, you agree to the app's general terms.
-    <a href="terms.html">Read full terms →</a></p> -->
-
     <p>By using CandleCue, you also agree to our <a href="terms.html">Terms of Service</a>.</p>
-
     <h2 id="contact">Contact</h2>
     <p>Email us at <a href="mailto:candlecueapp@gmail.com">candlecueapp@gmail.com</a></p>
   </div>
 
   <!-- JavaScript -->
   <script>
-    
-
     function toggleMenu() {
-        const drawer = document.getElementById("drawer");
-        const overlay = document.getElementById("overlay");
-        drawer.classList.toggle("open");
-        overlay.classList.toggle("active");
-      }
+      const drawer = document.getElementById("drawer");
+      const overlay = document.getElementById("overlay");
+      drawer.classList.toggle("open");
+      overlay.classList.toggle("active");
+    }
 
-      function closeDrawer() {
-        document.getElementById("drawer").classList.remove("open");
-        document.getElementById("overlay").classList.remove("active");
-      }
+    function closeDrawer() {
+      document.getElementById("drawer").classList.remove("open");
+      document.getElementById("overlay").classList.remove("active");
+    }
 
     function toggleLangMenu() {
       const menu = document.getElementById('lang-menu');
@@ -274,7 +262,6 @@
       document.getElementById('lang-menu').style.display = 'none';
     }
 
-    // Optional: Close language menu when clicking outside
     window.addEventListener('click', function (e) {
       const langButton = document.querySelector('.lang-button');
       const menu = document.getElementById('lang-menu');
@@ -282,10 +269,7 @@
         menu.style.display = 'none';
       }
     });
-
-  
   </script>
-
 </body>
 
 </html>
