@@ -78,7 +78,6 @@ h1 {
  
 
 details.faq-item summary {
-  all: unset;
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -88,7 +87,10 @@ details.faq-item summary {
   cursor: pointer;
   padding: 0.3em 0;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
+  padding-left: 1.5em;
 }
+
 
 details.faq-item summary .arrow {
   display: inline-block;
@@ -108,6 +110,21 @@ details.faq-item summary::marker {
 }
 
 
+details.faq-item summary::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.6em;
+  border-color: transparent transparent transparent #ff7300;
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::before {
+  transform: translateY(-50%) rotate(90deg);
+}
 
   </style>
 
@@ -131,12 +148,7 @@ details.faq-item summary::marker {
      <h1>FAQ</h1>
 
       <details class="faq-item">
-      <!-- <summary>
-        <span class="faq-arrow"></span>
-        <span class="faq-question">What is CandleCue used for?</span>
-        </summary> -->
-
-        <summary><span class="arrow">▶</span> What is CandleCue used for?</summary>
+        <summary>  What is CandleCue used for?</summary>
  
   <p>CandleCue helps traders stay disciplined by providing structured alerts to candle-close times on their selected
     timeframe—currently
@@ -150,12 +162,7 @@ details.faq-item summary::marker {
 
 
 <details class="faq-item">
-  <!-- <summary>
-    <span class="faq-arrow"></span>
-    <span class="faq-question"> Don’t most trading platforms already show countdowns to candle close?</span>
-  </summary> -->
- 
-  <summary><span class="arrow">▶</span> Don’t most trading platforms already show countdowns to candle close?</summary>
+  <summary>  Don’t most trading platforms already show countdowns to candle close?</summary>
  
  
   <p>
@@ -189,8 +196,7 @@ details.faq-item summary::marker {
     <span class="faq-arrow"></span>
     <span class="faq-question"> What are custom alerts, and why do they matter?</span>
   </summary> -->
-  <summary><span class="arrow">▶</span>
-      What are custom alerts, and why do they matter? 
+  <summary>  What are custom alerts, and why do they matter? 
   </summary>
  
 
@@ -215,7 +221,7 @@ details.faq-item summary::marker {
 <!-- Question 4 -->
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span>What are layered alerts, and how do they differ from custom alerts?   
+  <summary> What are layered alerts, and how do they differ from custom alerts?   
   </summary>
 
   <p>
@@ -248,7 +254,7 @@ details.faq-item summary::marker {
 
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span>Can I layer more than one sub-timeframe?  
+  <summary> Can I layer more than one sub-timeframe?  
   </summary>
  
   <p>Absolutely. For example, you can layer 5-minute, 15-minute, and 30-minute sub-timeframes into your 60-minute
@@ -257,7 +263,7 @@ details.faq-item summary::marker {
 </details>
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span>If I layer multiple sub-timeframes, what happens when several timeframes close at the same time?  
+  <summary> If I layer multiple sub-timeframes, what happens when several timeframes close at the same time?  
   </summary>
 
   <p>When multiple sub-timeframe bars close simultaneously, CandleCue will send only the notification for the largest
@@ -271,7 +277,7 @@ details.faq-item summary::marker {
 </details>
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span> I'm a swing trader using the 4-hour timeframe. Can I customize when each 4-hour candle starts?  
+  <summary>  I'm a swing trader using the 4-hour timeframe. Can I customize when each 4-hour candle starts?  
   </summary>
   <p>
     Certainly! By default, CandleCue uses a 4-hour cycle starting from UTC+0—a common baseline for crypto traders.
@@ -289,7 +295,7 @@ details.faq-item summary::marker {
 </details>
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span> Does CandleCue still work when my phone is asleep or I’m away from the app? 
+  <summary> Does CandleCue still work when my phone is asleep or I’m away from the app? 
   </summary>
   <p>
     Yes. Once activated, both the timer and alerts continue to function even when the app is running in the
@@ -310,7 +316,7 @@ details.faq-item summary::marker {
 </details>
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span>Why does CandleCue sometimes ask me to reopen the app?  
+  <summary> Why does CandleCue sometimes ask me to reopen the app?  
   </summary>
  
   <p>
@@ -328,7 +334,7 @@ details.faq-item summary::marker {
 </details>
 
   <details class="faq-item">
-    <summary><span class="arrow">▶</span>How is the “Current Time” determined, and how can I change it?  
+    <summary> How is the “Current Time” determined, and how can I change it?  
   </summary>
   <p>
     When you first install CandleCue, the app automatically detects your device’s local time zone and sets the UTC
@@ -365,7 +371,7 @@ details.faq-item summary::marker {
 </details>
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span> Which languages are supported in the app?  
+  <summary>  Which languages are supported in the app?  
   </summary>
   <p>CandleCue currently supports the following languages, covering the most widely spoken languages across key global regions and trading markets:</p>
   <ul>
@@ -388,7 +394,7 @@ details.faq-item summary::marker {
 </details>
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span> Does CandleCue require an internet connection? 
+  <summary>  Does CandleCue require an internet connection? 
   </summary>
    
   <p>No. CandleCue runs entirely offline using your device’s internal system clock. You only need internet access to
@@ -396,7 +402,7 @@ details.faq-item summary::marker {
 </details>
 
 <details class="faq-item">
-  <summary><span class="arrow">▶</span>Does CandleCue track my data? 
+  <summary>Does CandleCue track my data? 
   </summary>
   <p>No. CandleCue does not collect, transmit, or store any personal data on external servers. Your use of the app is
     completely private. The only data saved is your selected preferences—such as alert settings, UTC offset, or language
@@ -407,7 +413,7 @@ details.faq-item summary::marker {
 <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
 </div>
 
-<script>
+<!-- <script>
   document.querySelectorAll('details.faq-item').forEach(detail => {
     const arrow = detail.querySelector('.arrow');
     detail.addEventListener('toggle', () => {
@@ -418,6 +424,6 @@ details.faq-item summary::marker {
       }
     });
   });
-</script>
+</script> -->
 </body>
 </html>
