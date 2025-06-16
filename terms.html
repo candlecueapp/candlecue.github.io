@@ -127,18 +127,18 @@
 
     <div class="faq-item">
       <h2>1. Intended Use</h2>
-      <p>CandleCue is a notification-based app designed to alert users of candle-close timing on selected intervals. It
-        also
-        supports layered sub-timeframe alerts and custom notifications. The app does not provide trading advice or
-        signals.</p>
+      <p>CandleCue is a notification-based service designed to help traders build discipline and confidience in their trading. 
+        <!-- alert users of candle-close timing on selected intervals. -->
+         <!-- It also supports layered sub-timeframe alerts and custom notifications.  -->
+         It does not provide trading advice or signals.</p>
     </div>
 
     <div class="faq-item">
       <h2>2. Disclaimer</h2>
       <ul>
-        <li>This app is provided "as is" without warranties of any kind.</li>
+        <li>This service is provided "as is" without warranties of any kind.</li>
         <li>CandleCue does not guarantee trading performance or outcomes.</li>
-        <li>Use of the app is at your own risk and discretion.</li>
+        <li>Use of our serivice is at your own risk and discretion.</li>
       </ul>
     </div>
 
@@ -149,7 +149,7 @@
         that, you must reopen the app to refresh the alert queue.</p>
     </div> -->
 
-    <div class="faq-item">
+    <!-- <div class="faq-item">
       <h2>4. Privacy</h2>
       <ul>
         <li>No personal data is collected, stored, or transmitted by CandleCue.</li>
@@ -176,11 +176,21 @@
     <div class="faq-item">
       <h2>7. Governing Law</h2>
       <p>These terms are governed by the laws of Georgia, United States.</p>
-    </div>
+    </div> -->
 
-    <div class="faq-item">
-      <h2>8. Contact</h2>
+    <!-- <div class="faq-item">
+      <h2>3. Contact</h2>
       <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
+    </div> -->
+    <div class="faq-item">
+      <h2>3. Contact</h2>
+      <p>If you have any questions, please feel free to <a id="email-link">contact us</a>.</p>
+      <script>
+        const user = "candlecueapp";
+        const domain = "gmail.com";
+        document.getElementById("email-link").href = "mailto:" + user + "@" + domain;
+      </script>
+    </div>
     </div>
   </div>
 </body>

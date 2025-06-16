@@ -195,7 +195,7 @@
       <p>
         <!-- CandleCue helps you trade with clarity and control by delivering structured alerts anchored to your selected
         timeframe. -->
-        Whether you're trading 1-minute scalps or 4-hour swings, CandleCue keeps you aligned with your strategy
+        Whether you're trading 1-minute scalps or 4-hour swings, CandleCue keeps you aligned with your strategy and help form correct trading habits.
         <!-- —so you don't have to constantly watch the clock.
       </p>
       <!-- <p>
@@ -551,10 +551,10 @@
       </p>
       </details> -->
       <!-- <details class="faq-item">
-        <summary>Will I receive alerts if my phone is in Do Not Disturb (DND) or Focus Mode?</summary>
+        <summary>Will I receive alerts if my phone is in Do Not Disturb (DND) under Focus Mode?</summary>
         <p>
-          If your device is running <strong>iOS 15 or later</strong>, CandleCue’s main candle-close alerts will still be
-          delivered while Do Not Disturb (DND) or Focus Mode is active. These are marked as <strong>Time Sensitive</strong> to
+          If your device is running <strong>iOS 15 or later</strong>, CandleCue’s main candle-close alerts are designed to be
+          delivered while  Focus Mode is active such as Do Not Disturb. These are marked as <strong>Time Sensitive</strong> to
           ensure you never miss a critical candle close.
         </p>
         <p>
@@ -562,10 +562,15 @@
           Sensitive. These will be silenced while Focus Mode is on.
         </p>
         <p>
-          <strong>Tip:</strong> To ensure candle-close alerts always reach you, go to:<br>
+          <strong>Tip 1:</strong> To ensure candle-close alerts always reach you, go to:<br>
           <em>Settings → Notifications → CandleCue → Time Sensitive Notifications</em> and make sure it's enabled.
         </p>
-        </details> -->
+
+        <p>
+          <strong>Tip 2:</strong> To ensure <em> all </em> alerts reach you at all times, go to:<br>
+          <em>Settings → Focus → Do Not Disturb    </em> and make sure to add CandleCue under "Allow Notifications".
+        </p>
+        </details>
 
     <details class="faq-item">
       <summary>Does CandleCue require an internet connection?</summary>
@@ -582,9 +587,16 @@
         choice—and even that is stored locally on your device. Nothing ever leaves your phone, ensuring a streamlined
         and
         secure experience.</p>
-    </details> -->
+    </details>  -->
 
-    <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
+    <!-- <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p> -->
+
+    <p>If you have any questions, please feel free to <a id="email-link">contact us</a>.</p>
+    <script>
+      const user = "candlecueapp";
+      const domain = "gmail.com";
+      document.getElementById("email-link").href = "mailto:" + user + "@" + domain;
+    </script>
   </div>
 </body>
 

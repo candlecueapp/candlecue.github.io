@@ -243,7 +243,12 @@
     <h2 id="terms">Terms of Service</h2>
     <p>By using CandleCue, you also agree to our <a href="terms.html">Terms of Service</a>.</p> -->
     <h2 id="contact">Contact</h2>
-    <p>Email us at <a href="mailto:candlecueapp@gmail.com">candlecueapp@gmail.com</a></p>
+    <p>If you have any questions, please feel free to <a id="email-link">contact us</a>.</p>
+    <script>
+      const user = "candlecueapp";
+      const domain = "gmail.com";
+      document.getElementById("email-link").href = "mailto:" + user + "@" + domain;
+    </script>
   </div>
 
   <!-- JavaScript -->
