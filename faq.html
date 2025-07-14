@@ -747,12 +747,18 @@
 
     <!-- <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p> -->
 
-    <p>If you have any questions, please feel free to <a id="email-link">contact us</a>.</p>
-    <script>
-      const user = "candlecueapp";
-      const domain = "gmail.com";
-      document.getElementById("email-link").href = "mailto:" + user + "@" + domain;
-    </script>
+     <p>
+  If you have any questions or concerns about this Privacy Policy, please feel free to
+  <span id="email-link" style="color: #555; text-decoration: underline; cursor: pointer;">
+    contact us
+  </span>.
+</p>
+
+<script>
+  document.getElementById("email-link").addEventListener("click", function () {
+    window.location.href = "mailto:contact@candlecue.app";
+  });
+</script>
   </div>
 	</main>
 	
