@@ -1,132 +1,764 @@
  <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CandleCue Website</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
- <header class="top-bar">
-  <div class="top-bar-content">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>FAQ</title>
+ 	  <link rel="stylesheet" href="style.css">  
+	  
+    <style>
  
-	  <h1 class="logo">
-	  <a href="#" class="home-link logo" id="scrollToTop">
+      body {
+        margin: 0;
+/*        font-family: Arial, sans-serif;*/
+		   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+/*        background-color: #111;*/
+		  background-color: #fffff
+/*        color: white;*/
+			  color: #222;
+		  -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+/*
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        text-size-adjust: none;
+		  
+	
+*/
+      }
+		
+      
+		
+		
+  
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+/*        background-color: #fff;*/
+/*		color: #111;*/
+		  
+	    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+        backdrop-filter: blur(10px);  
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+		
+		.intro {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+      .home-link {
+/*        color: #ff7300;*/
+		   color: #111;   
+        text-decoration: none;
+        font-size: 18px;
+      }
+  
+      .brand {
+/*        font-weight: bold;*/
+        font-size: 1.2rem ; /*18px;*/
+        font-weight: 600;
+/*        color: #555;*/
+		
+      }
+  
+      .right-placeholder {
+        width: 80px;
+        height: 32px;
+      }
+  
+      .content {
+        padding: 80px 40px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+		
+		.content p,
+.content ul {
+  font-size: 16px !important;
+  color: #555;  /* soft gray for answers */
+}
+		
+		/*
+      ul {
+        padding-left: 0;
+        list-style-position: inside;
+      }
+*/
+  
+      h1 {
+        font-size: 32px !important;
+        color: #ff7300; /*CandleCue Color*/
+/*		  text-align: center;*/
+      }
+  
+      a {
+        color: #ff7300;
+        text-decoration: none;
+      }
+  
+      a:hover {
+        text-decoration: underline;
+      }
+  
+
+  
+      details.faq-item {
+        border-bottom: 1px solid #eee;   
+/*		  border-bottom: 1px solid #bbbb;   gray color*/
+        margin-bottom: 1.25em;
+        padding-bottom: 1.25em;
+        overflow: hidden;
+      }
+  
+      details.faq-item summary {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 18px;
+        font-weight: bold;
+/*        color: #ff7300;*/
+         color: #444;
+        cursor: pointer;
+        padding: 0.4em 0.4em 1.5em;
+        -webkit-tap-highlight-color: transparent;
+        line-height: 1.4;
+        word-break: break-word;
+        list-style: none;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+  
+      details.faq-item summary::-webkit-details-marker,
+      details.faq-item summary::marker {
+        display: none;
+      }
+  
+      details.faq-item summary::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        border-style: solid;
+        border-width: 0.35em 0 0.35em 0.6em;
+        border-color: transparent transparent transparent #ff7300;
+        transition: transform 0.3s ease;
+        width: 0;
+        height: 0;
+        display: block;
+      }
+  
+      details[open] summary::before {
+        transform: translateY(-50%) rotate(90deg);
+      }
+  
+      details.faq-item:not([open])> :not(summary) {
+        display: none;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        -webkit-transform: translateY(-100%);
+      }
+  
+      .content p,
+      .content ul {
+        font-size: 16px !important;
+      }
+  
+      @media (orientation: landscape) {
+        h1 {
+          font-size: 32px !important;
+        }
+  
+        details.faq-item summary {
+			font-size: 1.1rem;
+/*          font-size: 18px;*/
+          padding: 0.3em 0 0.3em 1.2em;
+          line-height: 1.2;
+        }
+  
+        .content p,
+        .content ul {
+          font-size: 16px !important;
+        }
+  
+        details.faq-item:not([open]) {
+          max-height: 2.5em;
+          overflow: hidden;
+        }
+      }
+  
+      @media (max-width: 600px) {
+        details.faq-item {
+          margin-bottom: 1em;
+          padding-bottom: 1em;
+        }
+  
+        details.faq-item summary {
+          padding: 0.3em 0 0.3em 1.2em;
+        }
+      }
+/*
+		
+		.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  gap: 8px;
+  margin: 0;
+}
+
+.logo-img {
+  height: 28px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+*/
+    </style>
+    </head>
+
+
+
+<body>
+  <!-- Header -->
+<!--
+  <div class="header">
+ 
+	  <a href="index_new.html" class="home-link"> <img src="App Icon_transparent.png" alt="CandleCue Logo" class="logo-img">  </a>
+    <a href="index_new.html" class="home-link">CandleCue</a>
+    <span class="brand">CandleCue</span>
+    <div class="right-placeholder"></div>
+  </div>
+-->
+<!--
+<div class="header">
+  <a href="index_new.html" class="home-link logo">
     <img src="App Icon_transparent.png" alt="CandleCue Logo" class="logo-img">
-    <span>CandleCue</span>	
-  </a>  
- </h1>
-	  
-	    <!-- Hamburger icon for mobile version -->
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      ☰
-    </button>
-	  
-	   <!-- Navigation links --> 
-    <div class="top-actions">
+    <span>CandleCue</span>
+  </a>
+  <div class="right-placeholder"></div>
+</div>
+	
+-->
+	<header class="top-bar">
+  <div class="top-bar-content">
+    <h1 class="logo">
+<!--
+      <img src="App Icon_transparent.png" alt="CandleCue Logo" class="logo-img">
+      CandleCue
+
+
+-->
+		
+		<a href="index.html" class="home-link logo">
+    <img src="App Icon_transparent.png" alt="CandleCue Logo" class="logo-img">
+    <span>CandleCue</span>
+  </a>
+    </h1>
+<!--    <div class="top-actions">-->
 <!--      <button>Features</button>-->
+<!--
 		<a href="#features" class="nav-link">Features</a>
 		<a href="faq.html" class="nav-link"  >FAQ</a>
 		<a href="#pricing" class="nav-link">Pricing</a>
+-->
 		
 <!--		<a href="faq.html" class="nav-link" target="_blank">FAQ</a> // new tab--> 
  
-    </div>
+<!--    </div>-->
   </div>
 </header>
-
-  <main class="main-editor" contenteditable="true">
-	  
+	
+	
+	
+<!-- Main Content -->
+	<main class="main-editor" contenteditable="true">
 	 <div class="content-container"> 
+<!--     <div class="content">-->
 	  
-		 
 	   <section class="intro">
-  <h1>Stay Synched. Trade with Precision!</h1>
-   <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank"> 
-<!--		 <a href="https://apps.apple.com/app/bear/id1016366447" target="_blank" rel="noopener">-->
-  <img src="app-store-badge_US_black.svg" alt="Download on the App Store" style="height: 50px;cursor: pointer;">
-</a>
-	 
-<!--  <p> Link to Apple App Store</p>-->
-</section>
+    <h1>Frequently Asked Questions</h1>
+		    </section>
+     
 		 
-<!--		 	   <section class="intro">-->
-		 <section style="margin-top: 80px;">
-  <h1>Never Miss Your Candle Close Again.</h1>
-<p>
-      <em>CandleCue</em> is a customizable, multi-layer alert system  built for traders—new and seasoned—who want to trade with
-      discipline and precision.
-      It delivers strategically timed notifications across your chosen timeframe and sub-timeframes, helping you stay focused, follow your
-      plan, and avoid impulsive decisions—one candle at a time.
-    </p>
- </section>
-<!--</section>-->
+		 
+		 
+	<h3>General Use and Features</h3 >	 
+		 
+    <!-- <details class="faq-item">
+      <summary>What is CandleCue used for?</summary>
+      <p>CandleCue helps traders stay disciplined by providing structured alerts to candle-close times on their selected
+        timeframe—currently supporting 1m, 2m, 3m, 5m, 15m, 30m, 1h, and 4h. Pre-close signals and layered cues from
+        shorter
+        sub-timeframes provide added awareness within each candle. By setting precise, structured alerts, CandleCue is
+        designed to reduce impulsive trades and help you stay aligned with your strategy—one candle at a time.</p>
+    </details> -->
+
+    <details class="faq-item">
+      <summary>What does CandleCue do, and how can it help improve my trading?</summary>
+      <p>
+          CandleCue helps you trade with clarity and control by delivering structured alerts anchored to your selected
+        timeframe.  
+        Whether you're trading 1-minute scalps or 4-hour swings, CandleCue is designed to reduce impulsive trades and support consistent execution—keeping you focused,
+        disciplined, and fully in control of your decisions.
+        <!-- CandleCue keeps you aligned with your strategy and help form correct trading habits.—so you don't have to constantly watch the clock.
+      </p>
+       <p>
+        Pre-close signals let you prepare before a candle closes. Layered alerts from shorter sub-timeframes offer insight
+        into what's unfolding inside your main candle—helping you stay in rhythm with real-time market shifts.
+      </p> -->
+      
+       
+      </p>
+      </details>
+
+    <details class="faq-item">
+      <summary>Don’t most trading platforms already show countdowns to candle close?</summary>
+      <p>Some do—but countdowns on most platforms are small, easy to miss, and tied to a single chart. To keep pace, you
+        must constantly watch the screen and keep one symbol open at all times, which can lead to distraction or even
+        premature trades based on incomplete candles.</p>
+    
+      <p>This constant monitoring splits your focus and increases the risk of overtrading or revenge-trading—reacting
+        impulsively to every tiny move while losing sight of your intended timeframe. Even if you’re disciplined, tracking
+        both chart movement and a tiny off-center timer adds unnecessary cognitive strain.</p>
+    
+      <p>By delivering structured, hands-free alerts through audio and haptics, CandleCue supports disciplined trading—so
+        your attention stay soley anchored to execution. With custom pre-close alerts and layered
+        sub-timeframe
+        cues, it helps reinforce healthy trading habits and timing discipline. Ideal for both active traders who want to
+        stay
+        sharp and swing traders who only want to tune in when it truly counts.</p>
+      </details>
+		 
+		 <details class="faq-item">
+      <summary>I use order flow charts to trade. How can CandleCue help me trade better?</summary>
+      <p>Even when using real-time order flow tools like Bookmap, CandleCue's time-based alerts can still add valuable
+        structure and context in the following ways:</p>
+    
+      <p>• Order flow is continuous — but market structure is discrete. Candles give you a framework to mentally group
+        activity into meaningful phases.</p>
+    
+      <p>• You'll stay aware of your position within the session — such as the end of a 15-minute bar or the midpoint of a
+        1-hour bar — which often align with liquidity shifts, trap setups, or breakout failures.</p>
+    
+      <p>• This awareness helps filter noise and confirm intent. For instance, absorption at the close of a 15-minute bar
+        can carry more weight than absorption mid-bar.</p>
+    
+      <p>• Many trading algorithms are programmed to trigger, pause, or adapt behavior at specific times — like market
+        open/close or the top and bottom of the hour.</p>
+    
+      <p>Ultimately, it's easy to get lost in the heatmap. CandleCue helps you sync visual flow with time-based structure —
+        a layer of edge many traders overlook.</p>
+      </details>
+		 
+		 <details class="faq-item">
+      <summary>How is the “Current Time” determined, and how can I change it?</summary>
+      <p>When you first install CandleCue, the app automatically detects your device’s local time zone and assigns a corresponding UTC offset. This offset is used  to display the “Current Time” at the bottom of the screen.</p>
+      <p>You can change this offset at any time in <strong>Timer Settings</strong> under <em>Select UTC Offset</em> to view the current time in
+        another
+        region—such as a major financial center or preferred market.</p>
+        <p>Available UTC offset options range from UTC−10 to UTC+13, including fractional UTC offsets like UTC+5:30 or UTC+9:30.</p>
+      <ul>
+        <li><strong>UTC−10:</strong> Honolulu (Hawaiian Islands)</li>
+        <li><strong>UTC−8:</strong> Los Angeles (non-DST), Vancouver (non-DST)</li>
+        <li><strong>UTC−6:</strong> Chicago (non-DST), Guatemala City, Mexico City</li>
+        <li><strong>UTC−5:</strong> New York (non-DST), Toronto (non-DST), Cancún, Lima, Bogotá</li>
+        <li><strong>UTC−3:</strong> São Paulo, Buenos Aires</li>
+        <li><strong>UTC+0:</strong> London (non-DST), Accra, Lisbon (non-DST)</li>
+        <li><strong>UTC+1:</strong> Berlin, Paris, Rome, Madrid</li>
+        <li><strong>UTC+2:</strong> Athens, Cairo, Johannesburg</li>
+        <li><strong>UTC+3:</strong> Moscow, Riyadh, Istanbul, Nairobi</li>
+        <li><strong>UTC+4:</strong> Dubai, Baku</li>
+        <li><strong>UTC+5:30:</strong> Delhi, Mumbai, Colombo</li>
+        <li><strong>UTC+7:</strong> Hanoi, Bangkok, Jakarta</li>
+        <li><strong>UTC+8:</strong> Perth, Singapore, Beijing, Kuala Lumpur</li>
+        <li><strong>UTC+9:</strong> Tokyo, Seoul</li>
+        <li><strong>UTC+9:30:</strong> Adelaide (non-DST), Darwin</li>
+        <li><strong>UTC+10:</strong> Brisbane, Sydney (non-DST), Port Moresby</li>
+        <li><strong>UTC+13:</strong> Nukuʻalofa (Tonga), Kiritimati (Kiribati)</li>
+      </ul>
+      <p><strong>Note:</strong> The UTC offset remains fixed until you change it manually. It does not adjust
+        automatically
+        for daylight saving time. This setting only affects how the current time is <em>displayed</em>—it does not change how
+        alerts
+        or timer intervals are calculated.</p>
+    </details>
+
+  <details class="faq-item">
+    <summary>Which languages are supported in the app?</summary>
+      <p>CandleCue currently supports the following languages, covering the most widely spoken languages across key global
+        regions and trading markets:</p>
+      <ul>
+        <li><strong>English:</strong> United States, United Kingdom, Canada, Australia, India</li>
+        <li><strong>Spanish:</strong> Spain, Mexico, Argentina, Colombia</li>
+        <li><strong>Portuguese (Brazil):</strong> Brazil</li>
+        <li><strong>Portuguese (Portugal):</strong> Portugal</li>
+        <li><strong>German:</strong> Germany, Austria, Switzerland</li>
+        <li><strong>French:</strong> France, Belgium, Switzerland, Canada (Quebec)</li>
+        <li><strong>Italian:</strong> Italy</li>
+        <li><strong>Arabic:</strong> Saudi Arabia, Egypt, UAE</li>
+        <li><strong>Hindi:</strong> India</li>
+        <li><strong>Vietnamese:</strong> Vietnam</li>
+        <li><strong>Korean:</strong> South Korea</li>
+        <li><strong>Japanese:</strong> Japan</li>
+        <li><strong>Chinese (Simplified):</strong> Mainland China, Singapore</li>
+        <li><strong>Chinese (Traditional):</strong> Taiwan, Hong Kong, Macau</li>
+      </ul>
+      <p>If you’d like to see support for another language, please contact us at
+        <a href="mailto:contact@candlecue.app">contact@candlecue.app</a>.
+      </p>
+  </details>  
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <h3>Alerts and Customization</h3>
+
+    <details class="faq-item">
+      <summary>What are custom alerts, and why do they matter?</summary>
+      <p>Ever missed an entry or exit because the candle closed before you were ready? CandleCue’s custom pre-close
+        alerts give you a head start by reminding you to refocus and prepare before the candle ends—so you’re ready to
+        act when it counts.</p>
+      <p>Whether you’re waiting for one last confirmation or second-guessing your setup, these cues bring your focus
+        back at
+        just the right moment. For example, you can set recurring reminders like “2 minutes before” to finalize your
+        checklist, confirm confluence, or get into execution mode. You can even set multiple early alerts (e.g., 5
+        minutes
+        and 1 minute before) to match your personality or trading routine.</p>
+      <p>These alerts repeat every candle, helping you stay sharp, consistent, and ready when it matters.</p>
+    </details>
+
+ 
+
+<details class="faq-item">
+  <summary>What are layered alerts, and how do they differ from custom alerts?</summary>
+  <p>Market structure often shifts well before a main candle closes—meaning two candles on the same timeframe can look
+    identical at the end but tell very different stories underneath. Layered alerts help reveal that story early by
+    triggering at the close of sub-timeframe bars—like every 5 minutes within a 1-hour candle—so you can stay in
+    rhythm with evolving market conditions.</p>
+
+  <p>This gives you confirmation-based timing cues without needing to constantly flip through different timeframes or
+    guess based on an unfinished candle. For example, if your main candle is 1 hour and you set 15-minute sub-timeframe
+    layering, you'll get alerts every quarter
+    hour when each 15-minute bar closes. This can help you recognize momentum shifts, indecision, or strength as it
+    unfolds—<em>before</em> your main candle finishes printing.</p>
+
+  <p>Unlike custom alerts—which notify you shortly before your main candle closes—layered alerts provide completed
+    signals from within the candle itself. Used together, they offer a structured, multi-timeframe view of market
+    behavior. Layered alerts show what’s developing underneath, while custom alerts help you prepare to act when your
+    main candle is about to close—clear, precise, and distraction-free.</p>
+</details>
+
+
+    <details class="faq-item">
+      <summary>Can I layer more than one sub-timeframe?</summary>
+      <p>Absolutely. For example, you can layer 5-minute, 15-minute, and 30-minute sub-timeframes into your 60-minute
+        (1-hour) main interval. This allows you to receive multiple bar-close notifications within each hour—offering a
+        more
+        detailed view of market structure across different time horizons.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>If I layer multiple sub-timeframes, what happens when several timeframes close at the same time?
+      </summary>
+      <p>When multiple sub-timeframe bars close simultaneously, CandleCue will send only the notification for the
+        largest
+        (i.e., highest) timeframe at that moment. For example, if your main timeframe is 1 hour and you’ve layered both
+        15-minute
+        and 30-minute intervals, you’ll receive the 30-minute alert at the half-hour marks (e.g., 9:30, 10:30), rather
+        than
+        the 15-minute one.</p>
+      <p>This helps avoid redundant signals and keeps the focus on higher timeframe closes, which often carry more
+        weight in
+        trade planning. It also reflects how many traders prioritize higher timeframes for trend context, while using
+        lower
+        ones for execution.</p>
+    </details>
+
+    
+
+
+
+    <details class="faq-item">
+      <summary>I’m a swing trader using the 4-hour timeframe. Can I customize when each 4-hour candle starts?</summary>
+      <p>Certainly! By default, CandleCue uses a 4-hour cycle starting from UTC+0—a common baseline for crypto traders.
+        To change this:</p>
+      <ul>
+        <li>Go to <strong>Timer Settings</strong></li>
+        <li>Under <strong>Select 4-Hour Block</strong>, choose <strong>Custom</strong></li>
+        <li>Then select your desired <strong>Custom Start Time</strong> (e.g., 9:00 AM or 9:30 AM) in 30-minute
+          increments
+        </li>
+      </ul>
+      <p>This allows you to align your candle timing with your local trading hours or a preferred market session.</p>
+    </details>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		  <h3>Performance  and Troubleshooting</h3>
+
+    <details class="faq-item">
+      <summary>Does CandleCue still work when my phone is asleep or I’m away from the app?</summary>
+      <p>Yes. Once activated, both the timer and alerts continue to function even when the app is running in the
+        background—including when your phone is asleep. In fact, alerts will still come through on schedule—even if
+        you’ve
+        accidentally swiped CandleCue away from your recent apps list (i.e., force-quit). Tapping an alert or reopening
+        the app will take you right where you left off.</p>
+      <p>This background support is one of CandleCue’s key features—helping traders stay in tune with market rhythm,
+        whether
+        actively monitoring charts, stepping away briefly, or trading longer timeframes—without needing to worry about
+        whether the app is open or the phone is asleep.</p>
+      <p>If the app has been in the background for an extended period of time, CandleCue may send a friendly reminder to
+        reopen the app to continue receiving notifications, but the timer itself runs continuously in the background at
+        all
+        times.</p>
+    </details>
+
 <!--
-    <h1>Never Miss Your Candle Close</h1>
-    <p>Start typing here... This editor is clean, minimal, and inspired by Bear.app.</p>
-	  
+    <details class="faq-item">
+      <summary>Why are some notifications delayed by up to 10 seconds?</summary>
+      <p>
+        In rare cases — especially if your phone is locked or put to sleep within 30 seconds of your next alert, or when
+        checking
+        notifications from the lock screen — some alerts may be delayed by a few seconds, sometimes up to 10 seconds.
+      </p>
+      <p>
+        This behavior appears more frequently on newer devices running iOS 18. It's not caused by the app itself, but by how
+        iOS
+        handles notification delivery under certain conditions.
+      </p>
+      <p> <strong>Tip:</strong> Some users have reported more consistent, on-time notifications after adjusting system
+        settings:</p>
+      <ul>
+        <li>Go to <strong>Settings › Apple Intelligence </strong></li>
+        <li>Temporarily disable Apple Intelligence and monitor whether the delay disappears</li>
+      </ul>
+      <p>
+        We continue to test and optimize alert behavior across different iPhone models and iOS versions. If you’re
+        experiencing this, please know you're not alone — and this does not affect the accuracy of your scheduled timer
+        logic.
+      </p>
+      </details>
 -->
-		 <section class="hero-image">
-  <img src="hero-timer_v2.png" alt="CandleCue 60-min countdown demo" />
-</section>
+
+<!--
+      <details class="faq-item">
+        <summary>Why are some notifications delayed by up to 10 seconds?</summary>
+        <p>
+          In rare situations — such as when your phone is locked shortly before an alert is scheduled to fire, or when
+          checking
+          notifications from the lock screen — iOS may delay certain alerts by a few seconds, sometimes up to 10 seconds.
+        </p>
+        <p>
+          This is not caused by the app itself. It reflects how iOS manages background processes and notification delivery
+          under newer power management and privacy conditions, especially on devices running iOS 18.
+        </p>
+        <p>🧠 <strong>Tip:</strong> Some users have found that alerts arrive more precisely after adjusting the following
+          system setting:</p>
+        <ul>
+          <li>Go to <strong>Settings › Apple Intelligence & Siri</strong></li>
+          <li>Temporarily disable Apple Intelligence and observe whether the delay disappears</li>
+        </ul>
+        <p>
+          We’ve thoroughly tested this app across multiple iOS versions and devices. If you're noticing this behavior, you're
+          not alone —
+          and it doesn’t affect the timer’s internal accuracy or logic.
+        </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why are some notifications delayed by up to 10 seconds?</summary>
+          <p>
+            In rare cases, especially on newer iPhones running iOS 17.5 or later, a small delay in notification delivery may
+            occur
+            — typically up to 10 seconds — when:
+          </p>
+          <ul>
+            <li>Your phone locks within 30 seconds of a scheduled alert</li>
+            <li>You check notifications from the lock screen using Face ID or gestures</li>
+          </ul>
+          <p>
+            This behavior isn’t caused by the app itself. It results from how iOS defers background tasks to preserve battery
+            and
+            prioritize various system-level features.
+          </p>
+          <p>
+            <strong>✅ What you can do:</strong>
+          </p>
+          <ul>
+            <li>Test notifications using the 1-minute time frame along with a few custom alerts</li> 
+            <li>Then press the power button to lock your phone within 30 seconds of an upcoming alert</li>
+            <li>Let the screen stay off until the expected alert time</li>
+            <li>Observe whether the notification arrives exactly at the expected time or with a delay</li>
+            <li>If you notice delays, try this:
+              <ul>
+                <li>Open <strong>Settings › Apple Intelligence &amp; Siri</strong></li>
+                <li>Temporarily turn off Apple Intelligence and retest alerts</li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            We continue to monitor and test notification behavior across devices. If you're affected, please know you're not
+            alone
+            — and your timers are still scheduled correctly. The delay is only in iOS’s final delivery timing.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Why are some notifications delayed by up to 10 seconds?</summary>
+          <p>
+            On newer iPhones running iOS 17.5 or later, you may occasionally notice a delay — typically up to 10 seconds — in
+            scheduled alert delivery when:
+          </p>
+          <ul>
+            <li>Your phone is locked within 30 seconds of an upcoming alert</li>
+            <li>You check notifications from the lock screen using Face ID or gestures</li>
+          </ul>
+          <p>
+            This behavior isn’t caused by the app itself. It results from how iOS manages background activity to conserve
+            battery and prioritize system-level processes.
+          </p>
+          <p><strong>✅ How to test and troubleshoot:</strong></p>
+          <ul>
+            <li>Set the timer to the 1-minute interval and enable a few custom alerts</li>
+            <li>With about 30 seconds left, press the power button to lock your phone</li>
+            <li>Leave the screen off until the alert should fire</li>
+            <li>Observe whether it arrives on time or is delayed</li>
+            <li>If you notice delays, try this:
+              <ul>
+                <li>Open <strong>Settings › Apple Intelligence &amp; Siri</strong></li>
+                <li>Temporarily disable Apple Intelligence and repeat the test</li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            We're continuing to test alert performance across iOS versions and devices. If you experience a delay, know that
+            your timers are still scheduled accurately — only the system’s final delivery timing is affected.
+          </p>
+          </details>
+-->
+
 	  
-	  <section id="features" style="margin-top: 80px;">
-    <h2>Features</h2>
-		  
-		  
-<!--    <p>Here are all the features of CandleCue...</p>-->
-		  <ul>
-      <li>Precise candle-close alerts for your main timeframe</li>
-      <li>Customizable pre-close alerts (e.g., 1 minute before) to prepare for key candle events</li>
-      <li>Sub-timeframe alerts within your main timeframe—like 5-minute bar closes during a 15-minute candle—for
-        enhanced
-        multi-timeframe awareness</li>
-      <li>Audio and/or haptic signals to keep you in sync with the market—without constantly needing to check the screen
-      </li>
-      <li>Runs reliably in the background—even when your device is locked or asleep</li>
-    </ul>
-  </section>
 	  
-	    <section id="pricing" style="margin-top: 80px;">
-    <h2>Price</h2>
-<p>
-  Start your 7-day free trial. Lock in your launch rate of $4.99/month or $29.99/year. </p>
-  </section>
-	  </div>
-  </main>
-	
-	
-	
-	 <!-- Footer -->
-	<footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
-    <p class="footer-copy">© 2025  CandleCue™</p>
-<!--	  <p class="footer-copy">© 2025 CandleCue®</p>-->
+<!--
+          <details class="faq-item">
+            <summary>Why are some notifications delayed by up to 10 seconds?</summary>
+            <p>
+              On some newer iPhones (iOS 17.5+), alerts may occasionally arrive up to 10 seconds late — especially if the phone is
+              locked shortly before the scheduled time or you check notifications in the lock-screen via Face ID.
+            </p>
+            <p>
+              This is not a bug in the app. It’s how iOS sometimes delays background tasks to optimize battery and system
+              performance.
+            </p>
+            <p><strong>Possible fix reported by users:</strong></p>
+            <ul>
+              <li>Go to <strong>Settings › Apple Intelligence &amp; Siri</strong></li>
+              <li>Try turning off Apple Intelligence and retesting alerts</li>
+            </ul>
+            <p>
+              Timers remain scheduled accurately — this only affects final delivery timing.
+            </p></details>
+-->
+            
+            
+ 
+    <details class="faq-item">
+      <summary>Why does CandleCue sometimes ask me to reopen the app?</summary>
+      <p>iOS allows only 64 scheduled notifications per app. If CandleCue goes into the background and stays there for
+        an
+        extended period, those scheduled alerts may eventually run out—depending on your selected timeframe and alert
+        settings. For example, this might happen after ~60 hours with a 4-hour main timeframe and 1-hour layered alerts.
+      </p>
+      <p>When that happens, CandleCue sends a gentle reminder to reopen the app. Just tap the prompt or open the app
+       manually and start the timer again (if not running already) to reload alerts instantly. All your settings are saved. 
+<!-- Your timer keeps running the entire time, and none of your settings are  lost.-->
+       </p>
+    </details>
+
+    
+
+      
+  <details class="faq-item">
+        <summary>Will I receive alerts if my phone is in Do Not Disturb (DND) under Focus Mode?</summary>
+        <p>
+          If your device is running <strong>iOS 15 or later</strong>, CandleCue’s main candle-close alerts are designed to be
+          delivered while  Focus Mode is active such as Do Not Disturb. These are marked as <strong>Time Sensitive</strong> to
+          ensure you never miss a critical candle close.
+        </p>
+        <p>
+          However, <strong>sub-timeframe alerts</strong> and <strong>pre-close warnings</strong> are not marked as Time
+          Sensitive. These will be silenced while Focus Mode is on.
+        </p>
+        <p>
+          <strong>Tip 1:</strong> To ensure candle-close alerts always reach you, go to:<br>
+          <em>Settings → Notifications → CandleCue → Time Sensitive Notifications</em> and make sure it's enabled.
+        </p>
+
+        <p>
+          <strong>Tip 2:</strong> To ensure <em> all </em> alerts reach you at all times, go to:<br>
+          <em>Settings → Focus → Do Not Disturb    </em> and make sure to add CandleCue under "Allow Notifications".
+        </p>
+        </details>
+
+    <!-- <details class="faq-item">
+      <summary>Does CandleCue require an internet connection?</summary>
+      <p>No. CandleCue runs entirely offline using your device’s internal system clock. You only need internet access to
+        download the app, receive updates, or access support links like the Privacy Policy or Terms of Service.</p>
+    </details> -->
+		 
+		 
+		 
+		 
+		   <h3>Privacy</h3>
+		 
+		 
+		 
+		 
+
+    <details class="faq-item">
+      <summary>Does CandleCue track my data?</summary>
+      <p>No. CandleCue does not collect, transmit, or store any personal data on external servers. Your use of the app
+        is
+        completely private. The only data saved is your selected preferences—such as alert settings, UTC offset, or
+        language
+        choice—and even that is stored locally on your device. Nothing ever leaves your phone, ensuring a streamlined
+        and
+        secure experience. </p>
+    </details> 
+
+    <!-- <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p> -->
+
+    <p>If you have any questions, please feel free to <a id="email-link">contact us</a>.</p>
+    <script>
+      const user = "candlecueapp";
+      const domain = "gmail.com";
+      document.getElementById("email-link").href = "mailto:" + user + "@" + domain;
+    </script>
   </div>
-</footer>
-
+	</main>
+	
+		<p style="text-align: center; font-size: 0.8rem; color: #888;">
+Last updated: July 12, 2025
+</p>
 </body>
+
 </html>
-
-<script>
-  // Smooth scroll to top
-  document.getElementById('scrollToTop').addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Hamburger menu toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.top-actions');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !expanded);
-  });
-</script>
