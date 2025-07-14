@@ -1,229 +1,83 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>CandleCue</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
-      -webkit-text-size-adjust: none;
-      -moz-text-size-adjust: none;
-      text-size-adjust: none;
-    }
-
-    /* Header */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #222;
-      padding: 10px 15px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .brand {
-      font-weight: bold;
-      font-size: 18px;
-      color: white;
-    }
-
-    .menu-toggle {
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .lang-button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      position: relative;
-      margin-right: 10px;
-    }
-
-    #lang-menu {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 35px;
-      background-color: #333;
-      border: 1px solid #555;
-      padding: 4px 0;
-      z-index: 1001;
-    }
-
-    #lang-menu div {
-      padding: 8px 12px;
-      cursor: pointer;
-      color: white;
-      text-align: left;
-    }
-
-    #lang-menu div:hover {
-      background-color: #444;
-    }
-
-    /* Drawer */
-    .drawer {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 220px;
-      height: 100%;
-      background-color: #222;
-      padding-top: 60px;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      z-index: 999;
-    }
-
-    .drawer.open {
-      transform: translateX(0);
-    }
-
-    .drawer a {
-      display: block;
-      padding: 15px;
-      color: white;
-      text-decoration: none;
-    }
-
-    .drawer a:hover {
-      background-color: #444;
-    }
-
-    /* Main content */
-    .content {
-      padding: 80px 40px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .content h1 {
-      font-size: 32px !important;
-      color: #ff7300;
-    }
-
-    .content h2 {
-      font-size: 24px !important;
-      color: #ff7300;
-    }
-
-    .content p,
-    .content ul {
-      font-size: 16px !important;
-    }
-
-    a {
-      color: #ff7300;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    /* Ensure consistent font sizes in landscape mode */
-    @media (orientation: landscape) {
-      .content h1 {
-        font-size: 32px !important;
-      }
-
-      .content h2 {
-        font-size: 24px !important;
-      }
-
-      .content p,
-      .content ul {
-        font-size: 16px !important;
-      }
-    }
-
-    /* Overlay styling */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(0px);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
-      z-index: 998;
-    }
-
-    .overlay.active {
-      opacity: 1;
-      visibility: visible;
-      backdrop-filter: blur(6px);
-    }
-
-    #home {
-      position: relative;
-      top: -70px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CandleCue Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Header -->
-  <div class="header">
-    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-    <span class="brand">CandleCue</span>
-    <div class="lang-button" onclick="toggleLangMenu()">EN ▾
-      <div id="lang-menu">
-        <div onclick="selectLang('EN')">EN</div>
-        <div onclick="selectLang('KR')">KR</div>
-        <div onclick="selectLang('JP')">JP</div>
-      </div>
+
+ <header class="top-bar">
+  <div class="top-bar-content">
+ 
+	  <h1 class="logo">
+	  <a href="#" class="home-link logo" id="scrollToTop">
+    <img src="App Icon_transparent.png" alt="CandleCue Logo" class="logo-img">
+    <span>CandleCue</span>	
+  </a>  
+ </h1>
+	  
+	    <!-- Hamburger icon for mobile version -->
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+	  
+	   <!-- Navigation links --> 
+    <div class="top-actions">
+<!--      <button>Features</button>-->
+		<a href="#features" class="nav-link">Features</a>
+		<a href="faq.html" class="nav-link"  >FAQ</a>
+		<a href="#pricing" class="nav-link">Pricing</a>
+		
+<!--		<a href="faq.html" class="nav-link" target="_blank">FAQ</a> // new tab--> 
+ 
     </div>
   </div>
+</header>
 
-  <div id="drawer" class="drawer">
-    <a href="#home" onclick="closeDrawer()">Home</a>
-    <a href="#features" onclick="closeDrawer()">Features</a>
-    <a href="#faq" onclick="closeDrawer()">FAQ</a>
-    <a href="#privacy" onclick="closeDrawer()">Privacy Policy</a>
-    <a href="#terms" onclick="closeDrawer()">Terms</a>
-    <a href="#contact" onclick="closeDrawer()">Contact</a>
-  </div>
-
-  <div id="overlay" class="overlay" onclick="closeDrawer()"></div>
-
-  <!-- Main Content -->
-  <div class="content">
-    <div id="home"></div>
-    <!-- <h1>Welcome to CandleCue</h1>
-    <p>
-      <em>CandleCue</em> is a customizable, multi-layer notification app for traders—new and seasoned—who value
-      discipline
-      and timing.
-      By delivering strategically timed alerts across your trading timeframe, it helps you stay focused, follow your
-      plan,
-      and avoid impulsive decisions—one candle at a time.
-    </p> -->
-
-    <h1>Welcome to CandleCue</h1>
-    <p>
+  <main class="main-editor" contenteditable="true">
+	  
+	 <div class="content-container"> 
+	  
+		 
+	   <section class="intro">
+  <h1>Stay Synched. Trade with Precision!</h1>
+   <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank"> 
+<!--		 <a href="https://apps.apple.com/app/bear/id1016366447" target="_blank" rel="noopener">-->
+  <img src="app-store-badge_US_black.svg" alt="Download on the App Store" style="height: 50px;cursor: pointer;">
+</a>
+	 
+<!--  <p> Link to Apple App Store</p>-->
+</section>
+		 
+<!--		 	   <section class="intro">-->
+		 <section style="margin-top: 80px;">
+  <h1>Never Miss Your Candle Close Again.</h1>
+<p>
       <em>CandleCue</em> is a customizable, multi-layer alert system  built for traders—new and seasoned—who want to trade with
       discipline and precision.
-      <!-- It delivers strategically timed notifications across your chosen timeframe, helping you stay focused, follow your
-      plan, and avoid impulsive decisions—one candle at a time. -->
+      It delivers strategically timed notifications across your chosen timeframe and sub-timeframes, helping you stay focused, follow your
+      plan, and avoid impulsive decisions—one candle at a time.
     </p>
-    <!-- <h2 id="features">Features</h2>
-    <ul>
-      <li>Precise candle-close alerts for your selected timeframe</li>
+ </section>
+<!--</section>-->
+<!--
+    <h1>Never Miss Your Candle Close</h1>
+    <p>Start typing here... This editor is clean, minimal, and inspired by Bear.app.</p>
+	  
+-->
+		 <section class="hero-image">
+  <img src="hero-timer_v2.png" alt="CandleCue 60-min countdown demo" />
+</section>
+	  
+	  <section id="features" style="margin-top: 80px;">
+    <h2>Features</h2>
+		  
+		  
+<!--    <p>Here are all the features of CandleCue...</p>-->
+		  <ul>
+      <li>Precise candle-close alerts for your main timeframe</li>
       <li>Customizable pre-close alerts (e.g., 1 minute before) to prepare for key candle events</li>
       <li>Sub-timeframe alerts within your main timeframe—like 5-minute bar closes during a 15-minute candle—for
         enhanced
@@ -232,57 +86,47 @@
       </li>
       <li>Runs reliably in the background—even when your device is locked or asleep</li>
     </ul>
-    <h2 id="faq">FAQ</h2>
-    <p>Have questions about how CandleCue works? Visit our <a href="faq.html">FAQ page</a> to learn more about its
-      features,
-      alerts, and usage.</p>
-    <h2 id="privacy">Privacy Policy</h2>
-    <p>CandleCue does not collect, store, or transmit any personal data. All preferences and alerts remain on your
-      device.
-      For full details, please see our <a href="privacy.html">Privacy Policy</a>.</p>
-    <h2 id="terms">Terms of Service</h2>
-    <p>By using CandleCue, you also agree to our <a href="terms.html">Terms of Service</a>.</p> -->
-    <h2 id="contact">Contact</h2>
-    <p>If you have any questions, please feel free to <a id="email-link">contact us</a>.</p>
-    <script>
-      const user = "candlecueapp";
-      const domain = "gmail.com";
-      document.getElementById("email-link").href = "mailto:" + user + "@" + domain;
-    </script>
+  </section>
+	  
+	    <section id="pricing" style="margin-top: 80px;">
+    <h2>Price</h2>
+<p>
+  Start your 7-day free trial. Lock in your launch rate of $4.99/month or $29.99/year. </p>
+  </section>
+	  </div>
+  </main>
+	
+	
+	
+	 <!-- Footer -->
+	<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <p class="footer-copy">© 2025  CandleCue™</p>
+<!--	  <p class="footer-copy">© 2025 CandleCue®</p>-->
   </div>
+</footer>
 
-  <!-- JavaScript -->
-  <script>
-    function toggleMenu() {
-      const drawer = document.getElementById("drawer");
-      const overlay = document.getElementById("overlay");
-      drawer.classList.toggle("open");
-      overlay.classList.toggle("active");
-    }
-
-    function closeDrawer() {
-      document.getElementById("drawer").classList.remove("open");
-      document.getElementById("overlay").classList.remove("active");
-    }
-
-    function toggleLangMenu() {
-      const menu = document.getElementById('lang-menu');
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function selectLang(lang) {
-      alert('Language switch: ' + lang + ' (feature coming soon)');
-      document.getElementById('lang-menu').style.display = 'none';
-    }
-
-    window.addEventListener('click', function (e) {
-      const langButton = document.querySelector('.lang-button');
-      const menu = document.getElementById('lang-menu');
-      if (!langButton.contains(e.target)) {
-        menu.style.display = 'none';
-      }
-    });
-  </script>
 </body>
-
 </html>
+
+<script>
+  // Smooth scroll to top
+  document.getElementById('scrollToTop').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Hamburger menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.top-actions');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+  });
+</script>
