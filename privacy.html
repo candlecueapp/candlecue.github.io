@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+	 <link rel="stylesheet" href="style.css">  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Privacy Policy</title>
+<!--
   <style>
     body {
       margin: 0;
@@ -86,18 +88,32 @@
       }
     }
   </style>
+-->
 </head>
 
 <body>
   <!-- Header -->
-  <div class="header">
-    <a href="index.html" class="home-link">Home</a>
-    <span class="brand">CandleCue</span>
-    <div class="right-placeholder"></div>
-  </div>
+	<header class="top-bar">
+  <div class="top-bar-content"> 
+<!--    <a href="index.html" class="home-link">Home</a>-->
+	  <!--    <span class="brand">CandleCue</span>-->
+	  <h1 class="logo">
+	  	<a href="index.html" class="home-link logo">
+    <img src="App Icon_transparent.png" alt="CandleCue Logo" class="logo-img">
+    <span>CandleCue</span>
+  </a>
+	  </h1>
+
+<!--    <div class="right-placeholder"></div>-->
+	
+  </div> 
+		</header>
 
   <!-- Main Content -->
-  <div class="content">
+	<main class="main-editor" contenteditable="true">
+	
+<!--  <div class="content">-->
+		 <div class="content-container"> 
     <h1>Privacy Policy</h1>
     <p>Your privacy matters to us. CandleCue is designed to work entirely offline and does not collect, store, or
       transmit
@@ -106,10 +122,68 @@
       <!-- <li>No account or login is required to use CandleCue.</li> -->
       <li>CandleCue does not track usage, collect device information, or include any third-party analytics or
         advertisements.</li>
-      <!-- <li>All alerts and settings are stored locally on your device and are never shared or transmitted.</li> -->
+      <li>All alerts and settings are stored locally on your device and are never shared or transmitted.</li>  
     </ul>
-    <p>If you have any questions, feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
+			 
+	<h2>1. No Personal Data Collected</h2>
+  <ul>
+    <li>CandleCue does not require you to create an account or sign in.</li>
+    <li>We do not collect your name, email address, location, or any personal identifiers.</li>
+    <li>There are no analytics tools, crash reporting services, or third-party SDKs integrated into the app.</li>
+  </ul>
+			 
+	<h2>2. Local Data Storage</h2>
+  <p>All app settings, preferences, and alert schedules are stored locally on your device. This data never leaves your device and is not shared with us or any third parties.</p>		 
+			 
+			 
+			   <h2>3. Notifications</h2>
+  <p>CandleCue uses local notifications scheduled by the app itself. These are processed entirely on your device and are not transmitted through any server.</p>
+			 
+			   <h2>4. Children's Privacy</h2>
+  <p>CandleCue is not directed to children under the age of 13. We do not knowingly collect any information from anyone under 13 years of age. If we become aware that a child has provided us with personal information, we will take immediate steps to delete such information.</p>
+			 
+			 <h2>5. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with a revised effective date. Continued use of the app after any changes constitutes your acceptance of the updated policy.</p>
+</div>
+			 
+<!--     <p>If you have any questions, feel free to <a href="mailto:contact@candlecue.app">contact us</a>.</p> -->
+<!--
+<p>
+  If you have any questions, please feel free to
+  <a id="email-link" href="#" style="color: #555; text-decoration: underline;">contact us</a>.
+</p>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const user = "contact";
+    const domain = "candlecue.app";
+    const email = "mailto:" + user + "@" + domain;
+    const link = document.getElementById("email-link");
+    link.setAttribute("href", email);
+    link.style.cursor = "pointer";
+  });
+</script>
+-->
+		
+			 <p>
+  If you have any questions or concerns about this Privacy Policy, please feel free to
+  <span id="email-link" style="color: #555; text-decoration: underline; cursor: pointer;">
+    contact us
+  </span>.
+</p>
+
+<script>
+  document.getElementById("email-link").addEventListener("click", function () {
+    window.location.href = "mailto:contact@candlecue.app";
+  });
+</script>
+		
   </div>
+</main>
+		<p style="text-align: center; font-size: 0.8rem; color: #888;">
+Last updated: July 12, 2025
+</p>
+ 
 </body>
 
 </html>
