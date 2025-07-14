@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
+	
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	 <link rel="stylesheet" href="style.css">  
   <title>Terms of Service</title>
-  <style>
+<!-- <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -110,24 +112,49 @@
       }
     }
   </style>
+-->
+	
+	
 </head>
 
 <body>
   <!-- Header -->
+<!--
   <div class="header">
     <a href="index.html" class="home-link">Home</a>
     <span class="brand">CandleCue</span>
     <div class="right-placeholder"></div>
   </div>
+-->
+ <!-- Header -->
+	<header class="top-bar">
+  <div class="top-bar-content"> 
+<!--    <a href="index.html" class="home-link">Home</a>-->
+	  <!--    <span class="brand">CandleCue</span>-->
+	  <h1 class="logo">
+	  	<a href="index.html" class="home-link logo">
+    <img src="App Icon_transparent.png" alt="CandleCue Logo" class="logo-img">
+    <span>CandleCue</span>
+  </a>
+	  </h1>
 
-  <!-- Main Content -->
-  <div class="content">
-    <h1>Terms of Service</h1>
-    <p>By using CandleCue, you agree to the terms outlined below. Please read them carefully.</p>
+<!--    <div class="right-placeholder"></div>-->
+	
+  </div> 
+		</header>
+ 
+	  <!-- Main Content -->
+	<main class="main-editor" contenteditable="true">
+		 <div class="content-container"> 
+<!--  <div class="content">-->
+ <h1>Terms of Service</h1>
+<!--<p>These Terms of Service (“Terms”) govern your use of CandleCue. By using the app, you agree to be bound by these Terms. If you do not agree, you may not use the service. We recommend reviewing these terms regularly as they may be updated periodically.</p>-->
+			 
+			 <p>These Terms of Service (“Terms”) govern your use of CandleCue. By using the app, you agree to be bound by these Terms. If you do not agree, you may not use the service. These Terms are between you and CEIT Analytics Consulting, LLC (referred to as “we”, “us”, or “our”). We recommend reviewing these Terms regularly as they may be updated periodically.</p>
 
     <div class="faq-item">
       <h2>1. Intended Use</h2>
-      <p>CandleCue is a notification-based service designed to help traders build discipline and confidience in their trading. 
+      <p>CandleCue is a notification-based service designed to help traders build discipline and confidence in their trading. 
         <!-- alert users of candle-close timing on selected intervals. -->
          <!-- It also supports layered sub-timeframe alerts and custom notifications.  -->
          It does not provide trading advice or signals.</p>
@@ -138,18 +165,25 @@
       <ul>
         <li>This service is provided "as is" without warranties of any kind.</li>
         <li>CandleCue does not guarantee trading performance or outcomes.</li>
-        <li>Use of our serivice is at your own risk and discretion.</li>
+        <li>Use of our service is at your own risk and discretion.</li>
       </ul>
     </div>
 
-    <!-- <div class="faq-item">
+<!--
+     <div class="faq-item">
       <h2>3. System Limitations</h2>
       <p>Due to iOS constraints, the app can schedule up to 64 alerts at a time. To continue receiving notifications
         beyond
         that, you must reopen the app to refresh the alert queue.</p>
-    </div> -->
+    </div> 
+-->
+			 <div class="faq-item">
+  <h2>3. System Limitations</h2>
+  <p>Due to iOS system constraints, CandleCue can schedule a maximum of 64 alerts at a time. To continue receiving notifications beyond that, you must reopen the app or start the timer again to refresh the alert queue.</p>
+  <p>Additionally, certain system-level features such as Apple Intelligence or Focus Modes may interfere with timely delivery of local notifications. In rare cases, alerts may be delayed by several seconds. These delays are outside our control and result from iOS prioritization rules. CandleCue disclaims liability for delays caused by operating system behavior.</p>
+</div>
 
-    <!-- <div class="faq-item">
+     <div class="faq-item">
       <h2>4. Privacy</h2>
       <ul>
         <li>No personal data is collected, stored, or transmitted by CandleCue.</li>
@@ -165,34 +199,151 @@
         without prior written permission. Unauthorized use may result in termination of access and possible legal
         action.</p>
     </div>
+			 
+	 <div class="faq-item">
+  <h2>6. Payment and Billing</h2>
+  <p>Subscriptions are billed through your Apple ID account upon confirmation of purchase. Payment will be charged to your Apple ID at the time of purchase and at the start of each renewal period.</p>
+</div>
 
-    <div class="faq-item">
-      <h2>6. Changes to Terms</h2>
-      <p>We may update these terms from time to time. Continued use of the app after updates constitutes acceptance of
-        the
-        revised terms.</p>
+<div class="faq-item">
+  <h2>7. Auto-Renewals</h2>
+  <p>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
+</div>
+
+<div class="faq-item">
+  <h2>8. Free Trial</h2>
+  <p>If you start a free trial, you will automatically be charged at the end of the trial period unless you cancel at least 24 hours before it ends. You can only redeem one free trial per Apple ID.</p>
+</div>
+
+<div class="faq-item">
+  <h2>9. Managing Your Subscription</h2>
+  <p>You can manage or cancel your subscription at any time by going to your device Settings > Apple ID > Subscriptions. Deleting the app does not cancel your subscription.</p>
+</div>
+
+
+			   <div class="faq-item">
+  <h2>10. Internet Connectivity and Subscription Verification</h2>
+<p>
+CandleCue requires periodic internet access to verify your active subscription status. While the app may continue to function without an internet connection for up to three (3) days, a valid internet connection is required thereafter to maintain access.
+</p>
+<p>
+If the app cannot verify your subscription status after this grace period, access to certain features may be temporarily suspended until an internet connection is restored.
+</p>
+<p>
+By using CandleCue, you acknowledge that the app is not designed for indefinite offline use and that continued access to all features depends on periodic subscription verification via the Internet.
+</p>
     </div>
+			 
+			 <div class="faq-item">
+  <h2>11. Refund Policy</h2>
+  <p>All payments and subscriptions are processed by Apple. Refunds are handled directly by Apple. You can request a refund through reportaproblem.apple.com.</p>
+</div>
+
+			 
+			 
+<div class="faq-item">
+  <h2>12. Changes to Terms</h2>
+  <p>We may update these terms from time to time. Continued use of the app after updates constitutes acceptance of the revised terms.</p>
+</div>
+
+   
 
     <div class="faq-item">
-      <h2>7. Governing Law</h2>
+      <h2>13. Governing Law</h2>
       <p>These terms are governed by the laws of Georgia, United States.</p>
-    </div> -->
+    </div>
+			 
+<div class="faq-item">
+  <h2>14. License</h2>
+  <p>We grant you a limited, non-exclusive, non-transferable license to use CandleCue for personal and non-commercial purposes, subject to these terms. You may not reproduce, distribute, modify, or create derivative works of the app without prior written permission.</p>
+</div>
+			 
+			 <div class="faq-item">
+  <h2>15. Termination</h2>
+  <p>We reserve the right to suspend or terminate your access to CandleCue at any time if we believe you have violated these terms or used the app inappropriately. No refunds will be issued in such cases.</p>
+</div>
+			 
+			 <div class="faq-item">
+  <h2>16. Third-Party Services</h2>
+  <p>CandleCue may link to third-party websites or services. We are not responsible for the content, functionality, or availability of these external sites. Use them at your own discretion and subject to their own terms.</p>
+</div>
+			 
+			 <div class="faq-item">
+  <h2>17. No Investment Advice</h2>
+  <p>CandleCue is not a brokerage, investment advisor, or financial planner. The app does not offer or recommend any trades. Any decisions you make based on notifications are entirely your own responsibility.</p>
+</div>
 
-    <!-- <div class="faq-item">
+<!--
+     <div class="faq-item">
       <h2>3. Contact</h2>
       <p>If you have any questions, please feel free to <a href="mailto:candlecueapp@gmail.com">contact us</a>.</p>
-    </div> -->
+    </div> 
+-->
+			 
     <div class="faq-item">
-      <h2>3. Contact</h2>
-      <p>If you have any questions, please feel free to <a id="email-link">contact us</a>.</p>
-      <script>
-        const user = "candlecueapp";
-        const domain = "gmail.com";
-        document.getElementById("email-link").href = "mailto:" + user + "@" + domain;
-      </script>
+      <h2>18. Contact</h2>
+<!--
+<p>
+  If you have any questions, please feel free to
+  <a id="email-link" href="#">contact us</a>.
+</p>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const user = "contact";
+    const domain = "candlecue.app";
+    const email = "mailto:" + user + "@" + domain;
+    const link = document.getElementById("email-link");
+    link.setAttribute("href", email);
+  });
+</script>
+-->
+		
+<!--
+		<p>
+  If you have any questions, please feel free to
+  <a id="email-link" href="mailto:contact@candlecue.app">contact us</a>.
+</p>
+
+<script>
+  const link = document.getElementById("email-link");
+  link.addEventListener("click", function (e) {
+    console.log("Link clicked:", link.href);
+    // DO NOT preventDefault()
+    // DO NOT stopPropagation()
+  });
+</script>
+-->
+		
+<p>
+  If you have any questions, please feel free to
+  <span id="email-link" style="color: #555; text-decoration: underline; cursor: pointer;">
+    contact us
+  </span>.
+
+	
+<!--
+	<p style="text-align: center; font-size: 0.8rem; color: #888;">
+Last updated: July 12, 2025
+</p>
+-->
+</p>
+
+<script>
+  document.getElementById("email-link").addEventListener("click", function () {
+    window.location.href = "mailto:contact@candlecue.app";
+  });
+</script>
+		
+		
     </div>
     </div>
-  </div>
+  
+</main>
+		<p style="text-align: center; font-size: 0.8rem; color: #888;">
+Last updated: July 13, 2025
+</p>
+
 </body>
 
 </html>
