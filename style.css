@@ -45,11 +45,11 @@ body {
   padding: 15px 100px;
 } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .top-bar-content {
     padding: 15px 16px;
   }
-}
+} */
 
 .logo {
   display: flex;
