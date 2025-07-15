@@ -30,26 +30,26 @@ body {
   }
 }  
 
-/* .top-bar-content { 
+.top-bar-content { 
   display: flex;
   justify-content: space-between;
   align-items: center;
-} */
+}
 
 
-.top-bar-content {
+/* .top-bar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 15px 100px;
-}
+} */
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .top-bar-content {
     padding: 15px 16px;
   }
-} */
+}
 
 .logo {
   display: flex;
