@@ -24,11 +24,11 @@ body {
  
 
 /* Responsive fix */
-/* @media (max-width: 768px) {
+  @media (max-width: 768px) {
   .top-bar {
     padding: 15px 16px;
   }
-}
+}  
 
 .top-bar-content {
   display: flex;
