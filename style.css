@@ -11,26 +11,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* .top-bar {
-	background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
-  backdrop-filter: blur(10px);                /* softens content behind */
-  padding: 15px 100px;
-	border-bottom: none;
-  position: sticky;
-  top: 0;
-  z-index: 100;  
-} 
-*/
-
 .top-bar {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* softens content behind */
   padding: 15px 100px;
   border-bottom: none;
   position: sticky;
   top: 0;
-  z-index: 100;
-}
+  z-index: 100;  
+} 
+
+ 
 
 /* Responsive fix */
 @media (max-width: 768px) {
