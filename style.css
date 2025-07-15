@@ -30,7 +30,7 @@ body {
   }
 }  
 
-.top-bar-content {
+/* .top-bar-content { 
   display: flex;
   justify-content: space-between;
   align-items: center;
